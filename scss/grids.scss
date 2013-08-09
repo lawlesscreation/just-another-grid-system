@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/*!
+ * Name: Just Another Grid System (JAGS)
+ * Description: A responsive, liquid grid system designed for fast and effective CSS layouts.
+ * Version: 1.0
+ * 
+ * Author: @lawlesscreation
+ * License: licenced under MIT - http://opensource.org/licenses/mit-license.php
+ * 
+ * Inspired by: EZ-CSS http://www.ez-css.org/ from Thierry Koblentz
+ */
+
+// Import setup variables
+@import "vars";
+
+
+/* JAGS
+------------------------------------------*/
+/* Box padding and margin */
+.gs-box {
+  padding: $gs_box_padding;
+  margin: $gs_box_margin;
+}
+
+/* Border colours */
+[class*=bdr] [class*=fl] {border-right-color: $gs_border_color; }
+
+[class*=bdr] [class*=fr] {border-left-color: $gs_border_color; }
+
+
+/******************** JAGS Core ********************/
+/* Wraps clears */
+[class*=gs-wrp] {
+  min-height: 0;
+  clear: both;
+}
+
+[class*=gs-wrp]:after,
+.gs-box:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*------------------------------------------------------------------------------------
+  Tablet (small/portrait) and up
+------------------------------------------------------------------------------------*/
+@media only screen and (min-width: $gs_break_mobile_large) {
+
+  /* JAGS
+  ------------------------------------------*/
+  /* Box padding and margin */
+  [class*=gs-wrp-2] .gs-box,
+  [class*=gs-wrp-4] .gs-box {
+    margin: $gs_box_margin_large;
+    padding: $gs_box_padding_large;
+  }
+
+
+  /* Negative margin classes for border overlaps */ 
+  [class*=bdr] [class*=fl-25],
+  [class*=bdr] [class*=fl-50] {
+    margin-right: -$gs_border_width;
+    border-right-width: $gs_border_width;
+    border-right-style: $gs_border_style;
+  }
+  
+  [class*=bdr] [class*=fr-25],
+  [class*=bdr] [class*=fr-50] {
+    margin-left: -1px; 
+    border-left-width: 1px;
+    border-left-style: $gs_border_style;
+  }
+
+
+  /******************** JAGS Core ********************/
+  /* Column float classes */
+  [class*=gs-wrp] [class*=fl-50],
+  [class*=gs-wrp] [class*=fl-25] {float: left; }
+
+  [class*=gs-wrp] [class*=fr-50],
+  [class*=gs-wrp] [class*=fr-25] {float: right; }
+
+  /* Remove borders for last columns */ 
+  [class*=bdr] [class*=oh],
+  [class=gs-wrp-4-bdr] [class*=gs-2] {
+    margin: 0; 
+    border-width: 0; 
+  }
+
+  /* Clear columns for responsiveness */
+  [class*=gs-wrp-4] [class*=gs-3] {clear: both; }
+
+  /* Column widths: 1/6(100), 1/3(100), 1/4(50), 1/2(50) */
+  [class*=gs-wrp] [class*=fl-25],
+  [class*=gs-wrp] [class*=fl-50],
+  [class*=gs-wrp] [class*=fr-25],
+  [class*=gs-wrp] [class*=fr-50] {width: 50%; } /* two columns */
+
+  [class*=gs-wrp] [class*=oh],
+  [class*=gs-wrp-4] [class*=gs-2] {
+    float: none;
+    min-height: 0;
+    overflow: hidden;
+    width: auto;
+  }
+
+} /* end media */
+
+
+
+/*------------------------------------------------------------------------------------
+  Tablet (landscape), Desktop (small) and up
+------------------------------------------------------------------------------------*/
+@media only screen and (min-width: $gs_break_tablet) {
+
+  /* JAGS
+  ------------------------------------------*/
+  /* Box padding and margin */
+  [class*=gs-wrp-3] .gs-box,
+  [class*=gs-wrp-6] .gs-box {
+    margin: $gs_box_margin_large;
+    padding: $gs_box_padding_large;
+  }
+
+  /* Negative margin classes for border overlaps */ 
+  [class*=bdr] [class*=fl-33],
+  [class*=bdr] [class*=fl-66] {
+    margin-right: -$gs_border_width;
+    border-right-width: $gs_border_width;
+    border-right-style: $gs_border_style;
+  }
+  
+  [class*=bdr] [class*=fr-33],
+  [class*=bdr] [class*=fr-66] {
+    margin-left: -$gs_border_width; 
+    border-left-width: $gs_border_width;
+    border-left-style: $gs_border_style;
+  }
+
+
+  /******************** JAGS Core ********************/
+  /* Floats */
+  [class*=gs-wrp] [class*=fl-66],
+  [class*=gs-wrp] [class*=fl-33] {float: left; }
+
+  [class*=gs-wrp] [class*=fr-66],
+  [class*=gs-wrp] [class*=fr-33] {float: right; }
+
+  /* Clear columns for responsiveness */
+  [class*=gs-wrp-6] [class*=gs-4] {clear: both; }
+  
+  /* Remove borders for last columns */ 
+  [class*=gs-wrp-3-bdr] [class*=gs-3],
+  [class*=gs-wrp-6-bdr] [class*=gs-6],
+  [class*=gs-wrp-6-bdr] [class*=gs-3] {
+    margin: 0; 
+    border-width: 0;
+  }
+
+  /* Column widths: 1/3(33.33), 2/3(66.66) */
+  [class*=gs-wrp] [class*=fl-33],
+  [class*=gs-wrp] [class*=fr-33] {width: 33.3333%; }
+
+  [class*=gs-wrp] [class*=fl-66],
+  [class*=gs-wrp] [class*=fr-66] {width: 66.6666%; }
+
+} /* end media */
+
+
+
+/*------------------------------------------------------------------------------------
+  Desktop (wide) and up
+------------------------------------------------------------------------------------*/
+@media only screen and (min-width: $gs_break_tablet_large) {
+
+  /* JAGS
+  ------------------------------------------*/
+  /* Negative margin classes for border overlaps */ 
+  [class*=bdr] [class*=fl-25],
+  [class*=bdr] [class*=fl-75] {
+    margin-right: -$gs_border_width;
+    border-right-width: $gs_border_width;
+    border-right-style: $gs_border_style;
+  }
+  
+  [class*=bdr] [class*=fr-25],
+  [class*=bdr] [class*=fr-75] {
+    margin-left: -1px; 
+    border-left-width: 1px;
+    border-left-style: $gs_border_style;
+  }
+
+
+  /******************** JAGS Core ********************/
+  [class*=gs-wrp] [class*=fl-25],
+  [class*=gs-wrp] [class*=fl-75] {float: left; }
+  
+  [class*=gs-wrp] [class*=fr-25],
+  [class*=gs-wrp] [class*=fr-75] {float: right; }
+
+  /* Cancel clear columns for responsiveness */
+  [class*=gs-wrp-4] [class*=gs-3] {clear: none; }
+
+  /* Remove borders for last columns */ 
+  [class=gs-wrp-4-bdr] [class*=gs-4] {
+    margin: 0; 
+    border-width: 0;
+  }
+
+  /* Column widths: 1/4(25), 3/4(75) */
+  [class*=gs-wrp] [class*=fl-25],
+  [class*=gs-wrp] [class*=fr-25] {width: 25%; }
+
+  [class*=gs-wrp] [class*=fl-75],
+  [class*=gs-wrp] [class*=fr-75] {width: 75%; }
+
+} /* end media */

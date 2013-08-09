@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Extreme testing: Just Another Grid System</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="A responsive, liquid grid system designed for fast and effective CSS layouts." />
+    <meta name="author" content="Matt Lawson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" media="screen" href="css/normalize.css" />
+    <link rel="stylesheet" media="screen" href="../css/grids.min.css" />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+
+    <script src="js/respond/respond.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header" role="banner">
+      <h1>Extreme testing</h1>
+      <p class="tagline">A responsive, liquid grid system designed for quick CSS prototyping and layouts</p>
+      <div class="nav" role="navigation">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="layouts.html">Layouts</a></li>
+        </ul>
+      </div><!-- .nav -->
+    </div><!-- .header -->
+
+    <div class="main" role="main">
+      <p>This is for crazy testing</p>
+
+      <h2>2 / (2)(3) columns</h2>
+      <div class="gs-wrp-2-bdr">
+        <div class="gs-1-fl-50">
+          <div class="gs-box">
+            .1.
+          </div>
+          <div class="gs-wrp-2-bdr">
+            <div class="gs-1-fl-50">
+              <div class="gs-box">
+                <p>Three columns</p>
+                .1.
+              </div>
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-2-bdr -->
+        </div>
+        <div class="gs-2-oh">
+          <div class="gs-box">
+            .2.
+          </div>
+          <div class="gs-wrp-3-bdr">
+            <div class="gs-1-fl-33">
+              <div class="gs-box">
+                <p>Three columns</p>
+                .1.
+              </div>
+            </div>
+            <div class="gs-2-fl-33">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">
+                .3.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-3-bdr -->
+        </div>
+      </div><!-- .gs-wrp-2-bdr -->
+
+
+
+      <h2>2 / (3)(3) columns</h2>
+      <div class="gs-wrp-2-bdr">
+        <div class="gs-1-fl-50">
+          <div class="gs-box">
+            .1.
+          </div>
+          <div class="gs-wrp-3-bdr">
+            <div class="gs-1-fl-33">
+              <div class="gs-box">
+                <p>Three columns</p>
+                .1.
+              </div>
+            </div>
+            <div class="gs-2-fl-33">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">
+                .3.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-3-bdr -->
+        </div>
+        <div class="gs-2-oh">
+          <div class="gs-box">
+            .2.
+          </div>
+          <div class="gs-wrp-3-bdr">
+            <div class="gs-1-fl-33">
+              <div class="gs-box">
+                <p>Three columns</p>
+                .1.
+              </div>
+            </div>
+            <div class="gs-2-fl-33">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">
+                .3.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-3-bdr -->
+        </div>
+      </div><!-- .gs-wrp-2-bdr -->
+
+
+      <h2>2 / (3)(3) columns reversed</h2>
+      <div class="gs-wrp-2-bdr">
+        <div class="gs-1-fr-50">
+          <div class="gs-box">
+            .1.
+          </div>
+          <div class="gs-wrp-3-bdr">
+            <div class="gs-1-fr-33">
+              <div class="gs-box">
+                <p>Three columns</p>
+                .1.
+              </div>
+            </div>
+            <div class="gs-2-fl-33">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">
+                .3.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-3-bdr -->
+        </div>
+        <div class="gs-2-oh">
+          <div class="gs-box">
+            .2.
+          </div>
+          <div class="gs-wrp-3-bdr">
+            <div class="gs-1-fr-33">
+              <div class="gs-box">
+                <p>Three columns</p>
+                .1.
+              </div>
+            </div>
+            <div class="gs-2-fr-33">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">
+                .3.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-3-bdr -->
+        </div>
+      </div><!-- .gs-wrp-2-bdr -->
+
+
+      <h2>2 / ((2/(2/(2))) (2/(3)(3))) columns - <em>crazy nesting!</em></h2>
+      <div class="gs-wrp-2-bdr">
+        <div class="gs-1-fl-50">
+          <div class="gs-box">
+            .1.
+          </div>
+          <div class="gs-wrp-2-bdr">
+            <div class="gs-1-fl-50">
+              <div class="gs-box">
+                .1.
+              </div>
+              <div class="gs-1-fl-50">
+                <div class="gs-box">
+                  .1.
+                </div>
+                <div class="gs-1-fl-50">
+                  <div class="gs-box">
+                    .1.
+                  </div>
+                </div>
+                <div class="gs-2-oh">
+                  <div class="gs-box">
+                    .2.
+                  </div>
+                </div>
+              </div><!-- .gs-1-fl-50 -->
+              <div class="gs-2-oh">
+                <div class="gs-box">
+                  .2.
+                </div>
+              </div><!-- .gs-2-oh -->
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">
+                .2.
+              </div>
+            </div>
+          </div><!-- .gs-wrp-2-bdr -->
+        </div>
+        <div class="gs-2-oh">
+          <div class="gs-box">
+            .2.
+          </div>
+          <div class="gs-wrp-2-bdr">
+            <div class="gs-1-fl-50">
+              <div class="gs-box">
+                .1.
+              </div>
+              <div class="gs-wrp-3-bdr">
+                <div class="gs-1-fl-33">
+                  <div class="gs-box">
+                    <p>Three columns</p>
+                    .1.
+                  </div>
+                </div>
+                <div class="gs-2-fl-33">
+                  <div class="gs-box">
+                    .2.
+                  </div>
+                </div>
+                <div class="gs-3-oh">
+                  <div class="gs-box">
+                    .3.
+                  </div>
+                </div>
+              </div><!-- .gs-wrp-3-bdr -->
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">
+                .2.
+              </div>
+              <div class="gs-wrp-3-bdr">
+                <div class="gs-1-fl-33">
+                  <div class="gs-box">
+                    <p>Three columns</p>
+                    .1.
+                  </div>
+                </div>
+                <div class="gs-2-fl-33">
+                  <div class="gs-box">
+                    .2.
+                  </div>
+                </div>
+                <div class="gs-3-oh">
+                  <div class="gs-box">
+                    .3.
+                  </div>
+                </div>
+              </div><!-- .gs-wrp-3-bdr -->
+            </div>
+          </div><!-- .gs-wrp-2-bdr -->
+        </div><!-- .gs-2-oh -->
+      </div><!-- .gs-wrp-2-bdr -->
+    </div><!-- .main -->
+
+    <div class="footer" role="contentinfo">
+      <p>Copyright &copy; 2013 <a href="http://twitter.com/lawlesscreation">@lawlesscreation</a></p>
+      <p>Licenced under <a href="http://opensource.org/licenses/mit-license.php">MIT</a></p>
+    </div><!-- .footer -->
+  </body>
+</html>

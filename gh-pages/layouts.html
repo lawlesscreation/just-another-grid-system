@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Layouts: Just Another Grid System (JAGS)</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="A responsive, liquid grid system designed for fast and effective CSS layouts." />
+    <meta name="author" content="Matt Lawson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" media="screen" href="css/normalize.css" />
+    <link rel="stylesheet" media="screen" href="../css/grids.min.css" />
+    <link rel="stylesheet" media="screen" href="css/smoothness/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+
+    <script src="js/respond/respond.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header" role="banner">
+      <h1>Just Another Grid System (JAGS)</h1>
+      <p class="tagline">A responsive, liquid grid system designed for quick CSS prototyping and layouts</p>
+      <div class="nav" role="navigation">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><span>Layouts</span></li>
+        </ul>
+      </div><!-- .nav -->
+    </div><!-- .header -->
+
+    <div class="main" role="main">
+      <h2>One column</h2>
+      <div class="gs-wrp">
+        <div class="gs-box">.gs-wrp .gs-box</div>
+      </div><!-- .gs-wrp -->
+      <pre>
+    &lt;div class="gs-wrp"&gt;
+      &lt;div class="gs-box"&gt;.gs-wrp .gs-box&lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp --&gt;
+      </pre>
+
+
+      <h2>Two columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#two-1">Default</a></li>
+          <li><a href="#two-2">Reversed</a></li>
+          <li><a href="#two-3">With borders</a></li>
+        </ul>
+        <div id="two-1">
+          <h3>Default</h3>
+          <div class="gs-wrp-2">
+            <div class="gs-1-fl-50">
+              <div class="gs-box">.gs-wrp-2 .gs-1-fl-50 .gs-box</div>
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-2 -->
+          <pre>
+    &lt;div class="gs-wrp-2"&gt;
+      &lt;div class="gs-1-fl-50"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fl-50 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+          </pre>  
+        </div>
+        <div id="two-2">
+          <h3>Reversed</h3>
+          <div class="gs-wrp-2">
+            <div class="gs-1-fr-50">
+              <div class="gs-box">.gs-wrp-2 .gs-1-fr-50 .gs-box</div>
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-2 -->
+          <pre>
+    &lt;div class="gs-wrp-2"&gt;
+      &lt;div class="gs-1-fr-50"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fr-50 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+          </pre>  
+        </div>
+        <div id="two-3">
+          <h3>With borders</h3>
+          <div class="gs-wrp-2-bdr">
+            <div class="gs-1-fl-50">
+              <div class="gs-box">.gs-wrp-2-bdr .gs-1-fl-50 .gs-box</div>
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">.gs-wrp-2-bdr .gs-2-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-2-bdr -->
+          <pre>
+    &lt;div class="gs-wrp-2-bdr"&gt;
+      &lt;div class="gs-1-fl-50"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2-bdr .gs-1-fl-50 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2-bdr .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+          </pre>  
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>Three columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#three-1">Default</a></li>
+          <li><a href="#three-2">Reversed</a></li>
+          <li><a href="#three-3">With borders</a></li>
+        </ul>
+        <div id="three-1">
+          <h3>Default</h3>
+          <div class="gs-wrp-3">
+            <div class="gs-1-fl-33">
+              <div class="gs-box">.gs-wrp-3 .gs-1-fl-33 .gs-box</div>
+            </div>
+            <div class="gs-2-fl-33">
+              <div class="gs-box">.gs-wrp-3 .gs-2-fl-33 .gs-box</div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">.gs-wrp-3 .gs-3-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-3 -->
+          <pre>
+    &lt;div class="gs-wrp-3"&gt;
+      &lt;div class="gs-1-fl-33"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-1-fl-33 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-fl-33"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-2-fl-33 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-3-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-3-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-3 --&gt;
+          </pre>  
+        </div>
+        <div id="three-2">
+          <h3>Reversed</h3>
+          <div class="gs-wrp-3">
+            <div class="gs-1-fr-33">
+              <div class="gs-box">.gs-wrp-3 .gs-1-fr-33 .gs-box</div>
+            </div>
+            <div class="gs-2-fr-33">
+              <div class="gs-box">.gs-wrp-3 .gs-2-fr-33 .gs-box</div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">.gs-wrp-3 .gs-3-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-3 -->
+          <pre>
+    &lt;div class="gs-wrp-3"&gt;
+      &lt;div class="gs-1-fr-33"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-1-fr-33 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-fr-33"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-2-fr-33 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-3-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-3-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-3 --&gt;
+          </pre>  
+        </div>
+        <div id="three-3">
+          <h3>With borders</h3>
+          <div class="gs-wrp-3-bdr">
+            <div class="gs-1-fl-33">
+              <div class="gs-box">.gs-wrp-3-bdr .gs-1-fl-33 .gs-box</div>
+            </div>
+            <div class="gs-2-fl-33">
+              <div class="gs-box">.gs-wrp-3-bdr .gs-2-fl-33 .gs-box</div>
+            </div>
+            <div class="gs-3-oh">
+              <div class="gs-box">.gs-wrp-3-bdr .gs-3-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-3-bdr -->
+          <pre>
+    &lt;div class="gs-wrp-3-bdr"&gt;
+      &lt;div class="gs-1-fl-33"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3-bdr .gs-1-fl-33 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-1-fl-33"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3-bdr .gs-1-fl-33 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-3-bdr .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-3 --&gt;
+          </pre>  
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>Four columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#four-1">Default</a></li>
+          <li><a href="#four-2">Reversed</a></li>
+          <li><a href="#four-3">With borders</a></li>
+        </ul>
+        <div id="four-1">
+          <h3>Default</h3>
+          <div class="gs-wrp-4">
+            <div class="gs-1-fl-25">
+              <div class="gs-box">.gs-wrp-4 .gs-1-fl-25 .gs-box</div>
+            </div>
+            <div class="gs-2-fl-25">
+              <div class="gs-box">.gs-wrp-4 .gs-2-fl-25 .gs-box</div>
+            </div>
+            <div class="gs-3-fl-25">
+              <div class="gs-box">.gs-wrp-4 .gs-3-fl-25 .gs-box</div>
+            </div>
+            <div class="gs-4-oh">
+              <div class="gs-box">.gs-wrp-4 .gs-4-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-4 -->
+          <pre>
+    &lt;div class="gs-wrp-4"&gt;
+      &lt;div class="gs-1-fl-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-1-fl-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-fl-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-2-fl-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-3-fl-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-3-fl-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-4-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-4-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-4 --&gt;
+          </pre>  
+        </div>
+        <div id="four-2">
+          <h3>Reversed</h3>
+          <div class="gs-wrp-4">
+            <div class="gs-1-fr-25">
+              <div class="gs-box">.gs-wrp-4 .gs-1-fr-25 .gs-box</div>
+            </div>
+            <div class="gs-2-fr-25">
+              <div class="gs-box">.gs-wrp-4 .gs-2-fr-25 .gs-box</div>
+            </div>
+            <div class="gs-3-fr-25">
+              <div class="gs-box">.gs-wrp-4 .gs-3-fr-25 .gs-box</div>
+            </div>
+            <div class="gs-4-oh">
+              <div class="gs-box">.gs-wrp-4 .gs-4-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-4 -->
+          <pre>
+    &lt;div class="gs-wrp-4"&gt;
+      &lt;div class="gs-1-fr-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-1-fr-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-fr-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-2-fr-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-3-fr-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-3-fr-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-4-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-4-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-4 --&gt;
+          </pre>  
+        </div>
+        <div id="four-3">
+          <h3>With borders</h3>
+          <div class="gs-wrp-4-bdr">
+            <div class="gs-1-fl-25">
+              <div class="gs-box">.gs-wrp-4-bdr .gs-1-fl-25 .gs-box</div>
+            </div>
+            <div class="gs-2-fl-25">
+              <div class="gs-box">.gs-wrp-4-bdr .gs-2-fl-25 .gs-box</div>
+            </div>
+            <div class="gs-3-fl-25">
+              <div class="gs-box">.gs-wrp-4-bdr .gs-3-fl-25 .gs-box</div>
+            </div>
+            <div class="gs-4-oh">
+              <div class="gs-box">.gs-wrp-4-bdr .gs-4-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-4-bdr -->
+          <pre>
+    &lt;div class="gs-wrp-4-bdr"&gt;
+      &lt;div class="gs-1-fl-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-1-fl-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-fl-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-2-fl-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-3-fl-25"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-3-fl-25 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-4-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-4-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-4 --&gt;
+          </pre>  
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>Other columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#other-1">66/33</a></li>
+          <li><a href="#other-2">75/25</a></li>
+        </ul>
+        <div id="other-1">
+          <h3>66/33</h3>
+          <div class="gs-wrp-2">
+            <div class="gs-1-fl-66">
+              <div class="gs-box">.gs-wrp-2 .gs-1-fl-66 .gs-box</div>
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-2 -->
+          <pre>
+    &lt;div class="gs-wrp-2"&gt;
+      &lt;div class="gs-1-fl-66"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fl-66 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+          </pre>  
+        </div>
+        <div id="other-2">
+          <h3>75/25</h3>
+          <div class="gs-wrp-2">
+            <div class="gs-1-fl-75">
+              <div class="gs-box">.gs-wrp-2 .gs-1-fl-75 .gs-box</div>
+            </div>
+            <div class="gs-2-oh">
+              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
+            </div>
+          </div><!-- .gs-wrp-2 -->
+          <pre>
+    &lt;div class="gs-wrp-2"&gt;
+      &lt;div class="gs-1-fl-75"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fl-75 .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="gs-2-oh"&gt;
+        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+          </pre>  
+        </div>
+      </div><!-- .tabs -->
+    </div><!-- .main -->
+
+    <div class="footer" role="contentinfo">
+      <p>Copyright &copy; 2013 <a href="http://twitter.com/lawlesscreation">@lawlesscreation</a></p>
+      <p>Licenced under <a href="http://opensource.org/licenses/mit-license.php">MIT</a></p>
+    </div><!-- .footer -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write("<script src='js/jquery/1.9.1/jquery.min.js'>\x3C/script>")</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>window.jQuery.ui || document.write("<script src='js/jqueryui/1.10.3/jquery-ui.min.js'>\x3C/script>")</script>
+    <script>
+      // for the gh-pages demo only. Not required for functionality.
+
+      $(document).ready(function(){
+      // document.ready used for anything that we need to load as soon as the DOM is loaded
+
+        $(function() {
+          $('.tabs').tabs();
+        });
+
+      }); // end document.ready
+    </script>
+  </body>
+</html>
