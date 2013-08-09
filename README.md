@@ -13,7 +13,7 @@ Simply add the CSS file:
 <link rel="stylesheet" media="all" href="css/grids.min.css" />
 ```
 
-Then look at the [different layouts](https://github.com/lawlesscreation/just-another-grid-system/gh-pages/layouts.html) to find the grid you require. You can nest the code to create even more [complex grids](https://github.com/lawlesscreation/just-another-grid-system/gh-pages/extreme-testing.html)!
+Then look at the [different layouts](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/layouts.html) to find the grid you require. You can nest the code to create even more [complex grids](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/extreme-testing.html)!
 
 If you need Internet Explorer support for IE7-IE8 you will need a JS polyfill for CSS3 Media Queries, such as [Respond](https://github.com/scottjehl/Respond) which should be added to the <code>&lt;head&gt;</code>:
 
