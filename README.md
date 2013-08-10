@@ -10,7 +10,7 @@
 Simply add the CSS file:
 
 ```html
-<link rel="stylesheet" media="all" href="css/grids.min.css" />
+<link rel="stylesheet" media="all" href="css/jags.min.css" />
 ```
 
 Then look at the [different layouts](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/layouts.html) to find the grid you require. You can nest the code to create even more [complex grids](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/extreme-testing.html)!
