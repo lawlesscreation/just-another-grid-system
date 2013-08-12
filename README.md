@@ -27,13 +27,13 @@ If you need Internet Explorer support for IE7-IE8 you will need a JS polyfill fo
 If you need to change some of the defaults like the media query breakpoints, margins or borders you can do using the <code>_vars.scss</code> and recompile using:
 
 ```bash
-$ sass scss/jags.scss css/jags.min.css --style compressed
+$ sass jags.scss:jags.min.css --style compressed
 ```
 
 or expanded:
 
 ```bash
-$ sass scss/jags.scss css/jags.css --style expanded
+$ sass jags.scss:jags.css --style expanded
 ```
 
 
