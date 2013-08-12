@@ -64,4 +64,4 @@ IE6 was supported but has been dropped since version 0.4 of JAGS. That said, it 
 
 Copyright © 2013 [@lawlesscreation](http://twitter.com/lawlesscreation)
 
-Licenced under [MIT](http://opensource.org/licenses/mit-license.php)
+Licensed under [MIT](http://opensource.org/licenses/mit-license.php)
