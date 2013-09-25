@@ -1,10 +1,10 @@
 @charset "UTF-8";/*!
- * Name: Just Another Grid System (JAGS)
- * Description: A responsive, liquid grid system designed for fast and effective CSS layouts.
- * Version: 1.0
- * 
- * Author: @lawlesscreation
- * License: licenced under MIT - http://opensource.org/licenses/mit-license.php
- * 
- * Inspired by: EZ-CSS http://www.ez-css.org/ from Thierry Koblentz
+ * Just Another Grid System (JAGS)
+ * A responsive, liquid grid system designed for fast and effective CSS layouts.
+ * Inspired by EZ-CSS http://www.ez-css.org/ from Thierry Koblentz.
+ *
+ * @version: 1.0
+ * @url: https://github.com/lawlesscreation/just-another-grid-system
+ * @author: @lawlesscreation
+ * @license: licenced under MIT - http://opensource.org/licenses/mit-license.php
  */.gs-box{padding:0 5px;margin:0 10px}[class*=bdr] [class*=fl]{border-right-color:red}[class*=bdr] [class*=fr]{border-left-color:red}[class*=gs-wrp]{min-height:0;clear:both}[class*=gs-wrp]:after,.gs-box:after{clear:both;content:".";display:block;height:0;visibility:hidden}@media only screen and (min-width: 30.25em){[class*=gs-wrp-2] .gs-box,[class*=gs-wrp-4] .gs-box{margin:0 10px 20px;padding:0 5px}[class*=bdr] [class*=fl-25],[class*=bdr] [class*=fl-50]{margin-right:-1px;border-right-width:1px;border-right-style:solid}[class*=bdr] [class*=fr-25],[class*=bdr] [class*=fr-50]{margin-left:-1px;border-left-width:1px;border-left-style:solid}[class*=gs-wrp] [class*=fl-50],[class*=gs-wrp] [class*=fl-25]{float:left}[class*=gs-wrp] [class*=fr-50],[class*=gs-wrp] [class*=fr-25]{float:right}[class*=bdr] [class*=oh],[class=gs-wrp-4-bdr] [class*=gs-2]{margin:0;border-width:0}[class*=gs-wrp-4] [class*=gs-3]{clear:both}[class*=gs-wrp] [class*=fl-25],[class*=gs-wrp] [class*=fl-50],[class*=gs-wrp] [class*=fr-25],[class*=gs-wrp] [class*=fr-50]{width:50%}[class*=gs-wrp] [class*=oh],[class*=gs-wrp-4] [class*=gs-2]{float:none;min-height:0;overflow:hidden;width:auto}}@media only screen and (min-width: 48.25em){[class*=gs-wrp-3] .gs-box,[class*=gs-wrp-6] .gs-box{margin:0 10px 20px;padding:0 5px}[class*=bdr] [class*=fl-33],[class*=bdr] [class*=fl-66]{margin-right:-1px;border-right-width:1px;border-right-style:solid}[class*=bdr] [class*=fr-33],[class*=bdr] [class*=fr-66]{margin-left:-1px;border-left-width:1px;border-left-style:solid}[class*=gs-wrp] [class*=fl-66],[class*=gs-wrp] [class*=fl-33]{float:left}[class*=gs-wrp] [class*=fr-66],[class*=gs-wrp] [class*=fr-33]{float:right}[class*=gs-wrp-6] [class*=gs-4]{clear:both}[class*=gs-wrp-3-bdr] [class*=gs-3],[class*=gs-wrp-6-bdr] [class*=gs-6],[class*=gs-wrp-6-bdr] [class*=gs-3]{margin:0;border-width:0}[class*=gs-wrp] [class*=fl-33],[class*=gs-wrp] [class*=fr-33]{width:33.3333%}[class*=gs-wrp] [class*=fl-66],[class*=gs-wrp] [class*=fr-66]{width:66.6666%}}@media only screen and (min-width: 62.25em){[class*=bdr] [class*=fl-25],[class*=bdr] [class*=fl-75]{margin-right:-1px;border-right-width:1px;border-right-style:solid}[class*=bdr] [class*=fr-25],[class*=bdr] [class*=fr-75]{margin-left:-1px;border-left-width:1px;border-left-style:solid}[class*=gs-wrp] [class*=fl-25],[class*=gs-wrp] [class*=fl-75]{float:left}[class*=gs-wrp] [class*=fr-25],[class*=gs-wrp] [class*=fr-75]{float:right}[class*=gs-wrp-4] [class*=gs-3]{clear:none}[class=gs-wrp-4-bdr] [class*=gs-4]{margin:0;border-width:0}[class*=gs-wrp] [class*=fl-25],[class*=gs-wrp] [class*=fr-25]{width:25%}[class*=gs-wrp] [class*=fl-75],[class*=gs-wrp] [class*=fr-75]{width:75%}}
