@@ -46,7 +46,7 @@ The media queries have been structured in a "mobile-first" approach from 0px up,
 
 ### Equal height columns
 
-By default JAGS doesn't come with the equal height columns script I'm using on this page but feel free to use the one in the code.
+By default JAGS doesn't come with the equal height columns script that I'm using here, but feel free to use the one in the demo.
 
 ### What about IE6?
 
