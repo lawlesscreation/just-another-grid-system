@@ -65,3 +65,8 @@ IE6 was supported but has been dropped since version 0.4 of JAGS. That said, it 
 Copyright © 2013 [@lawlesscreation](http://twitter.com/lawlesscreation)
 
 Licensed under [MIT](http://opensource.org/licenses/mit-license.php)
+
+
+## TODO
+
+ - Add 6 column grid. 6x1 columns resize to 3x2, to 2x3, to 1x6;
