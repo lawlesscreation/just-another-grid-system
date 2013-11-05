@@ -54,13 +54,7 @@ IE6 was supported but has been dropped since version 0.4 of JAGS. That said, it 
 
 
 ## Release history
- - v1.0 RELEASE. This includes adding to [GitHub pages](http://lawlesscreation.github.io/just-another-grid-system/) (2013-08-09).
- - v0.6 Updated to only include box margin-bottom when in columns, not linear, remove the -fl- or -fr- class when used in combination with the -oh as it is not required.
- - v0.5 Added SCSS and variables to the grid system can be easily configured.
- - v0.4 **Dropped support for IE6** (it can still be done with [Selectivizr](http://selectivizr.com/), but has been removed by default).
- - v0.3 Fixed a few typo inconsistencies. Compressed code a little more.
- - v0.2 Fixed missing CSS for 66/33 and 75/25 split.
- - v0.1 released under the MIT license (2012-03-13).
+ - v1.0 Stable version for 1.0 release (2013-08-09).
 
 Copyright © 2013 [@lawlesscreation](http://twitter.com/lawlesscreation)
 
