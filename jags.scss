@@ -4,7 +4,7 @@
  * A responsive, liquid grid system designed for fast and effective CSS layouts.
  * Inspired by EZ-CSS http://www.ez-css.org/ from Thierry Koblentz.
  *
- * @version: 1.0
+ * @version: 1.1
  * @url: https://github.com/lawlesscreation/just-another-grid-system
  * @author: @lawlesscreation
  * @license: licenced under MIT - http://opensource.org/licenses/mit-license.php
@@ -54,24 +54,27 @@
   ------------------------------------------*/
   /* Box padding and margin */
   [class*=gs-wrp-2] .gs-box,
-  [class*=gs-wrp-4] .gs-box {
+  [class*=gs-wrp-4] .gs-box,
+  [class*=gs-wrp-6] .gs-box {
     margin: $gs_box_margin_large;
     padding: $gs_box_padding_large;
   }
 
 
   /* Negative margin classes for border overlaps */ 
+  [class*=bdr] [class*=fl-16],
   [class*=bdr] [class*=fl-25],
   [class*=bdr] [class*=fl-50] {
     margin-right: -$gs_border_width;
     border-right-width: $gs_border_width;
     border-right-style: $gs_border_style;
   }
-  
+
+  [class*=bdr] [class*=fr-16],
   [class*=bdr] [class*=fr-25],
   [class*=bdr] [class*=fr-50] {
-    margin-left: -1px; 
-    border-left-width: 1px;
+    margin-left: -$gs_border_width;
+    border-left-width: $gs_border_width;
     border-left-style: $gs_border_style;
   }
 
@@ -79,29 +82,39 @@
   /******************** JAGS Core ********************/
   /* Column float classes */
   [class*=gs-wrp] [class*=fl-50],
-  [class*=gs-wrp] [class*=fl-25] {float: left; }
+  [class*=gs-wrp] [class*=fl-25],
+  [class*=gs-wrp] [class*=fl-16] {float: left; }
 
   [class*=gs-wrp] [class*=fr-50],
-  [class*=gs-wrp] [class*=fr-25] {float: right; }
+  [class*=gs-wrp] [class*=fr-25],
+  [class*=gs-wrp] [class*=fr-16] {float: right; }
 
   /* Remove borders for last columns */ 
   [class*=bdr] [class*=oh],
-  [class=gs-wrp-4-bdr] [class*=gs-2] {
+  [class=gs-wrp-4-bdr] [class*=gs-2],
+  [class=gs-wrp-6-bdr] [class*=gs-2],
+  [class=gs-wrp-6-bdr] [class*=gs-4] {
     margin: 0; 
     border-width: 0; 
   }
 
   /* Clear columns for responsiveness */
-  [class*=gs-wrp-4] [class*=gs-3] {clear: both; }
+  [class*=gs-wrp-4] [class*=gs-3],
+  [class*=gs-wrp-6] [class*=gs-3],
+  [class*=gs-wrp-6] [class*=gs-5] {clear: both; }
 
-  /* Column widths: 1/6(100), 1/3(100), 1/4(50), 1/2(50) */
+  /* Column widths: 1/6(50), 1/4(50), 1/2(50) */
+  [class*=gs-wrp] [class*=fl-16],
   [class*=gs-wrp] [class*=fl-25],
   [class*=gs-wrp] [class*=fl-50],
+  [class*=gs-wrp] [class*=fr-16],
   [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-50] {width: 50%; } /* two columns */
+  [class*=gs-wrp] [class*=fr-50] {width: 50%; }
 
   [class*=gs-wrp] [class*=oh],
-  [class*=gs-wrp-4] [class*=gs-2] {
+  [class*=gs-wrp-4] [class*=gs-2],
+  [class*=gs-wrp-6] [class*=gs-2],
+  [class*=gs-wrp-6] [class*=gs-4] {
     float: none;
     min-height: 0;
     overflow: hidden;
@@ -127,13 +140,15 @@
   }
 
   /* Negative margin classes for border overlaps */ 
+  [class*=bdr] [class*=fl-16],
   [class*=bdr] [class*=fl-33],
   [class*=bdr] [class*=fl-66] {
     margin-right: -$gs_border_width;
     border-right-width: $gs_border_width;
     border-right-style: $gs_border_style;
   }
-  
+
+  [class*=bdr] [class*=fr-16],
   [class*=bdr] [class*=fr-33],
   [class*=bdr] [class*=fr-66] {
     margin-left: -$gs_border_width; 
@@ -144,29 +159,44 @@
 
   /******************** JAGS Core ********************/
   /* Floats */
-  [class*=gs-wrp] [class*=fl-66],
-  [class*=gs-wrp] [class*=fl-33] {float: left; }
+  [class*=gs-wrp] [class*=fl-16],
+  [class*=gs-wrp] [class*=fl-33],
+  [class*=gs-wrp] [class*=fl-66] {float: left; }
 
-  [class*=gs-wrp] [class*=fr-66],
-  [class*=gs-wrp] [class*=fr-33] {float: right; }
+  [class*=gs-wrp] [class*=fr-16],
+  [class*=gs-wrp] [class*=fr-33],
+  [class*=gs-wrp] [class*=fr-66] {float: right; }
+
+  /* Cancel clear columns for responsiveness */
+  [class*=gs-wrp-6] [class*=gs-3],
+  [class*=gs-wrp-6] [class*=gs-5] {clear: none; }
 
   /* Clear columns for responsiveness */
   [class*=gs-wrp-6] [class*=gs-4] {clear: both; }
-  
+
   /* Remove borders for last columns */ 
   [class*=gs-wrp-3-bdr] [class*=gs-3],
-  [class*=gs-wrp-6-bdr] [class*=gs-6],
-  [class*=gs-wrp-6-bdr] [class*=gs-3] {
+  [class*=gs-wrp-6-bdr] [class*=gs-3],
+  [class*=gs-wrp-6-bdr] [class*=gs-6] {
     margin: 0; 
     border-width: 0;
   }
 
-  /* Column widths: 1/3(33.33), 2/3(66.66) */
+  /* Column widths: 1/6(33.33`), 1/3(33.33`), 2/3(66.6`) */
+  [class*=gs-wrp] [class*=fl-16],
   [class*=gs-wrp] [class*=fl-33],
+  [class*=gs-wrp] [class*=fr-16],
   [class*=gs-wrp] [class*=fr-33] {width: 33.3333%; }
 
   [class*=gs-wrp] [class*=fl-66],
   [class*=gs-wrp] [class*=fr-66] {width: 66.6666%; }
+
+  [class*=gs-wrp-6] [class*=gs-3] {
+    float: none;
+    min-height: 0;
+    overflow: hidden;
+    width: auto;
+  }
 
 } /* end media */
 
@@ -180,13 +210,15 @@
   /* JAGS
   ------------------------------------------*/
   /* Negative margin classes for border overlaps */ 
+  [class*=bdr] [class*=fl-16],
   [class*=bdr] [class*=fl-25],
   [class*=bdr] [class*=fl-75] {
     margin-right: -$gs_border_width;
     border-right-width: $gs_border_width;
     border-right-style: $gs_border_style;
   }
-  
+
+  [class*=bdr] [class*=fr-16],
   [class*=bdr] [class*=fr-25],
   [class*=bdr] [class*=fr-75] {
     margin-left: -1px; 
@@ -196,14 +228,17 @@
 
 
   /******************** JAGS Core ********************/
+  [class*=gs-wrp] [class*=fl-16],
   [class*=gs-wrp] [class*=fl-25],
   [class*=gs-wrp] [class*=fl-75] {float: left; }
-  
+
+  [class*=gs-wrp] [class*=fr-16],
   [class*=gs-wrp] [class*=fr-25],
   [class*=gs-wrp] [class*=fr-75] {float: right; }
 
   /* Cancel clear columns for responsiveness */
-  [class*=gs-wrp-4] [class*=gs-3] {clear: none; }
+  [class*=gs-wrp-4] [class*=gs-3],
+  [class*=gs-wrp-6] [class*=gs-4] {clear: none; }
 
   /* Remove borders for last columns */ 
   [class=gs-wrp-4-bdr] [class*=gs-4] {
@@ -211,7 +246,10 @@
     border-width: 0;
   }
 
-  /* Column widths: 1/4(25), 3/4(75) */
+  /* Column widths: 1/6(16.6`), 1/4(25), 3/4(75) */
+  [class*=gs-wrp] [class*=fl-16],
+  [class*=gs-wrp] [class*=fr-16] {width: 16.6666%; }
+
   [class*=gs-wrp] [class*=fl-25],
   [class*=gs-wrp] [class*=fr-25] {width: 25%; }
 
