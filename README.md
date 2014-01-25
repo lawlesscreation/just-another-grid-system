@@ -55,7 +55,7 @@ IE6 was supported but has been dropped since version 0.4 of JAGS. That said, it 
 
 ## Release history
 
- - v1.1.0 Changed to semantic versioning and Gruntfile (2014-01-25)
+ - v1.1.0 Changed to semantic versioning (2014-01-25)
  - v1.1 Includes 1/6 grid and improvements (2013-12-12)
  - v1.0 Stable version for 1.0 release (2013-08-09)
 
