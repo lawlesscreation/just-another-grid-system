@@ -50,11 +50,12 @@ By default JAGS doesn't come with the equal height columns script that I'm using
 
 ### What about IE6?
 
-IE6 was supported but has been dropped since version 0.4 of JAGS. That said, it can be done and requires a JavaScript <em>polyfill</em> called [Selectivizr](http://selectivizr.com/) for CSS attribute selector support.
+IE6 was supported but has been dropped since version 0.0.4 of JAGS. That said, it can be done and requires a JavaScript <em>polyfill</em> called [Selectivizr](http://selectivizr.com/) for CSS attribute selector support.
 
 
 ## Release history
 
+ - 1.1.0 
  - 1.1.0 Changed to semantic versioning (2014-01-25)
 
 Copyright © 2013 [@lawlesscreation](http://twitter.com/lawlesscreation)
