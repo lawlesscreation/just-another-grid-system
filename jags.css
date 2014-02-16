@@ -1,121 +1,148 @@
 /*!
- * Just Another Grid System (JAGS)
- * A responsive, liquid grid system designed for fast and effective CSS layouts.
- * Inspired by EZ-CSS http://www.ez-css.org/ from Thierry Koblentz.
+ * Just Another gs System (JAGS)
+ * A responsive, liquid gs system designed for fast and effective CSS layouts.
  *
- * @version: 1.1.1
- * @url: https://github.com/lawlesscreation/just-another-grid-system
+ * @version: 2.0.0
+ * @url: https://github.com/lawlesscreation/just-another-gs-system
  * @author: @lawlesscreation
  * @license: licenced under MIT - http://opensource.org/licenses/mit-license.php
  */
-/* JAGS
-------------------------------------------*/
-/* Box padding and margin */
-.gs-box {
-  padding: 0 5px;
-  margin: 0 10px;
-}
-
-/* Border colours */
-[class*=bdr] [class*=fl] {
-  border-right-color: red;
-}
-
-[class*=bdr] [class*=fr] {
-  border-left-color: red;
-}
-
-/******************** JAGS Core ********************/
-/* Wraps clears */
-[class*=gs-wrp] {
-  min-height: 0;
-  clear: both;
-}
-
-[class*=gs-wrp]:after,
-.gs-box:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
 /*------------------------------------------------------------------------------------
-  Tablet (small/portrait) and up
+  Mobile and up
+  Excludes browsers that do not support media queries natively or with a polyfil
 ------------------------------------------------------------------------------------*/
-@media only screen and (min-width: 30.25em) {
-  /* JAGS
+@media only screen {
+  /* JAGS CONFIG
   ------------------------------------------*/
   /* Box padding and margin */
-  [class*=gs-wrp-2] .gs-box,
-  [class*=gs-wrp-4] .gs-box,
-  [class*=gs-wrp-6] .gs-box {
-    margin: 0 10px 20px;
-    padding: 0 5px;
+  .grid_box {
+    height: 1%;
+    margin: 0 10px 10px;
+    padding: 10px;
+  }
+
+  /* Border style */
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-25,
+  .grid--bdr .grid_col--fl-33,
+  .grid--bdr .grid_col--fl-50,
+  .grid--bdr .grid_col--fl-66,
+  .grid--bdr .grid_col--fl-75 {
+    border-right-color: red;
+    border-right-width: 1px;
+  }
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-25,
+  .grid--bdr .grid_col--fr-33,
+  .grid--bdr .grid_col--fr-50,
+  .grid--bdr .grid_col--fr-66,
+  .grid--bdr .grid_col--fr-75 {
+    border-left-color: red;
+    border-left-width: 1px;
+  }
+
+  /* JAGS CORE
+  ------------------------------------------*/
+  .grid,
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--6 {
+    clear: both;
+    height: 1%;
+    min-height: 0;
+  }
+  .grid:after,
+  .grid--2:after,
+  .grid--3:after,
+  .grid--4:after,
+  .grid--6:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .grid_box:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+}
+/* end media */
+/*--------------------------------------------------------------------------------
+  Mobile (large/landscape) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: 30.25em) {
+  /* JAGS CONFIG
+  ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: 0 10px 10px;
+    padding: 10px;
   }
 
   /* Negative margin classes for border overlaps */
-  [class*=bdr] [class*=fl-16],
-  [class*=bdr] [class*=fl-25],
-  [class*=bdr] [class*=fl-50] {
-    margin-right: -1px;
-    border-right-width: 1px;
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-25,
+  .grid--bdr .grid_col--fl-50 {
     border-right-style: solid;
+    margin-right: -1px;
   }
-
-  [class*=bdr] [class*=fr-16],
-  [class*=bdr] [class*=fr-25],
-  [class*=bdr] [class*=fr-50] {
-    margin-left: -1px;
-    border-left-width: 1px;
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-25,
+  .grid--bdr .grid_col--fr-50 {
     border-left-style: solid;
+    margin-left: -1px;
   }
 
-  /******************** JAGS Core ********************/
+  /* JAGS CORE
+  ------------------------------------------*/
   /* Column float classes */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fl-50] {
+  .grid_col--fl-16,
+  .grid_col--fl-25,
+  .grid_col--fl-50 {
     float: left;
   }
 
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-50] {
+  .grid_col--fr-16,
+  .grid_col--fr-25,
+  .grid_col--fr-50 {
     float: right;
   }
 
   /* Remove borders for last columns */
-  [class*=bdr] [class*=oh],
-  [class=gs-wrp-4-bdr] [class*=gs-2],
-  [class=gs-wrp-6-bdr] [class*=gs-2],
-  [class=gs-wrp-6-bdr] [class*=gs-4] {
+  .grid--4.grid--bdr .grid_col--2,
+  .grid--6.grid--bdr .grid_col--2,
+  .grid--6.grid--bdr .grid_col--4 {
+    border-style: none;
     margin: 0;
-    border-width: 0;
   }
 
   /* Clear columns for responsiveness */
-  [class*=gs-wrp-4] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-5] {
+  .grid--4 .grid_col--3,
+  .grid--6 .grid_col--3,
+  .grid--6 .grid_col--5 {
     clear: both;
   }
 
   /* Column widths: 1/6(50), 1/4(50), 1/2(50) */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fl-50],
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-50] {
+  .grid_col--fl-16,
+  .grid_col--fl-25,
+  .grid_col--fl-50,
+  .grid_col--fr-16,
+  .grid_col--fr-25,
+  .grid_col--fr-50 {
     width: 50%;
   }
 
-  [class*=gs-wrp] [class*=oh],
-  [class*=gs-wrp-4] [class*=gs-2],
-  [class*=gs-wrp-6] [class*=gs-2],
-  [class*=gs-wrp-6] [class*=gs-4] {
+  .grid_col--oh,
+  .grid--4 .grid_col--2,
+  .grid--6 .grid_col--2,
+  .grid--6 .grid_col--4 {
     float: none;
     min-height: 0;
     overflow: hidden;
@@ -123,83 +150,86 @@
   }
 }
 /* end media */
-/*------------------------------------------------------------------------------------
-  Tablet (landscape), Desktop (small) and up
-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------
+  Tablet (small/portrait) and up
+--------------------------------------------------------------------------------*/
 @media only screen and (min-width: 48.25em) {
-  /* JAGS
+  /* JAGS CONFIG
   ------------------------------------------*/
   /* Box padding and margin */
-  [class*=gs-wrp-3] .gs-box,
-  [class*=gs-wrp-6] .gs-box {
-    margin: 0 10px 20px;
-    padding: 0 5px;
+  .grid_box {
+    margin: 0 10px 10px;
+    padding: 10px;
   }
 
   /* Negative margin classes for border overlaps */
-  [class*=bdr] [class*=fl-16],
-  [class*=bdr] [class*=fl-33],
-  [class*=bdr] [class*=fl-66] {
-    margin-right: -1px;
-    border-right-width: 1px;
+  .grid--6.grid--bdr .grid_col--fl-16,
+  .grid--6.grid--bdr .grid_col--fl-33,
+  .grid--6.grid--bdr .grid_col--fl-66,
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-33,
+  .grid--bdr .grid_col--fl-66 {
     border-right-style: solid;
+    margin-right: -1px;
   }
-
-  [class*=bdr] [class*=fr-16],
-  [class*=bdr] [class*=fr-33],
-  [class*=bdr] [class*=fr-66] {
-    margin-left: -1px;
-    border-left-width: 1px;
+  .grid--6.grid--bdr .grid_col--fr-16,
+  .grid--6.grid--bdr .grid_col--fr-33,
+  .grid--6.grid--bdr .grid_col--fr-66,
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-33,
+  .grid--bdr .grid_col--fr-66 {
     border-left-style: solid;
+    margin-left: -1px;
   }
 
-  /******************** JAGS Core ********************/
-  /* Floats */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-33],
-  [class*=gs-wrp] [class*=fl-66] {
+  /* JAGS CORE
+  ------------------------------------------*/
+  /* Column float classes */
+  .grid--6 .grid_col--fl-16,
+  .grid_col--fl-33,
+  .grid_col--fl-66 {
     float: left;
   }
 
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-33],
-  [class*=gs-wrp] [class*=fr-66] {
+  .grid--6 .grid_col--fr-16,
+  .grid_col--fr-33,
+  .grid_col--fr-66 {
     float: right;
   }
 
   /* Cancel clear columns for responsiveness */
-  [class*=gs-wrp-6] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-5] {
+  .grid--6 .grid_col--3,
+  .grid--6 .grid_col--5 {
     clear: none;
   }
 
   /* Clear columns for responsiveness */
-  [class*=gs-wrp-6] [class*=gs-4] {
+  .grid--6 .grid_col--4 {
     clear: both;
   }
 
   /* Remove borders for last columns */
-  [class*=gs-wrp-3-bdr] [class*=gs-3],
-  [class*=gs-wrp-6-bdr] [class*=gs-3],
-  [class*=gs-wrp-6-bdr] [class*=gs-6] {
+  .grid--3.grid--bdr .grid_col--3,
+  .grid--6.grid--bdr .grid_col--3,
+  .grid--6.grid--bdr .grid_col--6 {
+    border-style: none;
     margin: 0;
-    border-width: 0;
   }
 
   /* Column widths: 1/6(33.33`), 1/3(33.33`), 2/3(66.6`) */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-33],
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-33] {
+  .grid--6 .grid_col--fl-16,
+  .grid_col--fl-33,
+  .grid--6 .grid_col--fr-16,
+  .grid_col--fr-33 {
     width: 33.3333%;
   }
 
-  [class*=gs-wrp] [class*=fl-66],
-  [class*=gs-wrp] [class*=fr-66] {
+  .grid_col--fl-66,
+  .grid_col--fr-66 {
     width: 66.6666%;
   }
 
-  [class*=gs-wrp-6] [class*=gs-3] {
+  .grid--6 .grid_col--3 {
     float: none;
     min-height: 0;
     overflow: hidden;
@@ -207,67 +237,83 @@
   }
 }
 /* end media */
-/*------------------------------------------------------------------------------------
-  Desktop (wide) and up
-------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------
+  Tablet (large/landscape), Desktop (small) and up
+--------------------------------------------------------------------------------*/
 @media only screen and (min-width: 62.25em) {
-  /* JAGS
+  /* JAGS CONFIG
   ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: 0 10px 10px;
+    padding: 10px;
+  }
+
   /* Negative margin classes for border overlaps */
-  [class*=bdr] [class*=fl-16],
-  [class*=bdr] [class*=fl-25],
-  [class*=bdr] [class*=fl-75] {
-    margin-right: -1px;
-    border-right-width: 1px;
+  .grid--6.grid--bdr .grid_col--fl-16,
+  .grid--6.grid--bdr .grid_col--fl-25,
+  .grid--6.grid--bdr .grid_col--fl-75,
+  .grid--4.grid--bdr .grid_col--fl-16,
+  .grid--4.grid--bdr .grid_col--fl-25,
+  .grid--4.grid--bdr .grid_col--fl-75,
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-25,
+  .grid--bdr .grid_col--fl-75 {
     border-right-style: solid;
+    margin-right: -1px;
   }
-
-  [class*=bdr] [class*=fr-16],
-  [class*=bdr] [class*=fr-25],
-  [class*=bdr] [class*=fr-75] {
-    margin-left: -1px;
-    border-left-width: 1px;
+  .grid--6.grid--bdr .grid_col--fr-16,
+  .grid--6.grid--bdr .grid_col--fr-25,
+  .grid--6.grid--bdr .grid_col--fr-75,
+  .grid--4.grid--bdr .grid_col--fr-16,
+  .grid--4.grid--bdr .grid_col--fr-25,
+  .grid--4.grid--bdr .grid_col--fr-75,
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-25,
+  .grid--bdr .grid_col--fr-75 {
     border-left-style: solid;
+    margin-left: -1px;
   }
 
-  /******************** JAGS Core ********************/
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fl-75] {
+  /* JAGS CORE
+  ------------------------------------------*/
+  .grid--6 .grid_col--fl-16,
+  .grid--4 .grid_col--fl-25,
+  .grid_col--fl-75 {
     float: left;
   }
 
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-75] {
+  .grid--6 .grid_col--fr-16,
+  .grid--4 .grid_col--fr-25,
+  .grid_col--fr-75 {
     float: right;
   }
 
   /* Cancel clear columns for responsiveness */
-  [class*=gs-wrp-4] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-4] {
+  .grid--4 .grid_col--3,
+  .grid--6 .grid_col--4 {
     clear: none;
   }
 
   /* Remove borders for last columns */
-  [class=gs-wrp-4-bdr] [class*=gs-4] {
+  .grid--bdr .grid_col--4 {
+    border-style: none;
     margin: 0;
-    border-width: 0;
   }
 
   /* Column widths: 1/6(16.6`), 1/4(25), 3/4(75) */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fr-16] {
+  .grid--6 .grid_col--fl-16,
+  .grid--6 .grid_col--fr-16 {
     width: 16.6666%;
   }
 
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fr-25] {
+  .grid--4 .grid_col--fl-25,
+  .grid--4 .grid_col--fr-25 {
     width: 25%;
   }
 
-  [class*=gs-wrp] [class*=fl-75],
-  [class*=gs-wrp] [class*=fr-75] {
+  .grid_col--fl-75,
+  .grid_col--fr-75 {
     width: 75%;
   }
 }

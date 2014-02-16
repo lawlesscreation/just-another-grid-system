@@ -4,7 +4,7 @@
     <title>Just Another Grid System (JAGS)</title>
 
     <meta charset="utf-8" />
-    <meta name="description" content="A responsive, liquid grid system designed for fast and effective CSS layouts." />
+    <meta name="description" content="A CSS grid system created for developing consistent, responsive and liquid grids" />
     <meta name="author" content="Matt Lawson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,7 +18,7 @@
   <body>
     <div class="header" role="banner">
       <h1>Just Another Grid System (JAGS)</h1>
-      <p class="tagline">A responsive, liquid grid system designed for quick CSS prototyping and layouts</p>
+      <p class="tagline">A CSS grid system created for developing consistent, responsive and liquid grids.</p>
       <div class="nav" role="navigation">
         <ul>
           <li><span>Home</span></li>
@@ -31,103 +31,104 @@
       <a class="btn" href="https://github.com/lawlesscreation/just-another-grid-system">View on GitHub</a>
       <a class="btn" href="https://github.com/lawlesscreation/just-another-grid-system/archive/master.zip">Download ZIP</a>
 
-      <div class="gs-wrp">
-        <div class="gs-box">
-          <p>The idea of JAGS was to create a grid system that could be used to rapidly create a consistent, responsive, liquid grid that would adapt to various device sizes.</p>
+      <div class="grid">
+        <div class="grid_col--1">
+          <div class="grid_box">
+            <p>The idea of JAGS was to create a grid system that could be used to rapidly consruct responsive, liquid grids that were consistent and would easily adapt to various device sizes.</p>
 
-          <h2>What makes this one different?</h2>
-          <p>Well, maybe nothing! There are lots of <em>CSS grid</em> systems out there but at the time, none seemed to tick all the boxes:</p>
+            <h2>What makes this one different?</h2>
+            <p>Well, maybe nothing! There are lots of <em>CSS grid systems</em> out there, but at the time most seemed overcomplicated or lacked particular features/support. JAGS was created to use:</p>
+          </div>
         </div>
+      </div><!-- .grid -->
 
-        <div class="gs-wrp-4">
-          <div class="gs-1-fl-25">
-            <div class="gs-box">
-              <h3>Liquid columns</h3>
-              <p>Percentage widths make them liquid, so they will fill the space available.</p>
-              <p><em>You can easily add fixed widths to create a stepped layout if you wish.</em></p>
-            </div>
+      <div class="grid--4 grid--bdr">
+        <div class="grid_col--1 grid_col--fl-25">
+          <div class="grid_box">
+            <h3>Liquid columns</h3>
+            <p>Percentage widths make them liquid, so they will fill the space available. You can easily add fixed width to create a stepped layout if you wish.</p>
           </div>
-          <div class="gs-2-fl-25">
-            <div class="gs-box">
-              <h3>Minimal HTML</h3>
-              <p>Progressive class names and the use of CSS attribute selectors make the HTML quick and easy to build (though you can go a little crazy with nesting if you wish!).</p>
-            </div>
+        </div>
+        <div class="grid_col--2 grid_col--fl-25">
+          <div class="grid_box">
+            <h3>Consistent HTML</h3>
+            <p>Ever seen a large project with <code>.col</code>, <code>.column</code>, <code>.grid</code> all doing the same thing?! JAGS <abbr title="without the double underscore">loosely</abbr> follows the <abbr title="Block__Element--Modifier">BEM</abbr> syntax to ensure your grid system is consistent.</p>
           </div>
-          <div class="gs-3-fl-25">
-            <div class="gs-box">
-              <h3>CSS media queries</h3>
-              <p>Media queries can be customized easily to allow the grid to respond at breakpoints that suite the content.</p>
-            </div>
+        </div>
+        <div class="grid_col--3 grid_col--fl-25">
+          <div class="grid_box">
+            <h3>CSS media queries</h3>
+            <p>The CSS breakpoints (as well as the column gutters) can be customized allowing the grid to be configured to suite the content.</p>
           </div>
-          <div class="gs-4-oh">
-            <div class="gs-box">
-              <h3>Legacy browser support&hellip;</h3>
-              <p>If you want it! JAGS will work with IE7+ with a little help from <a href="https://github.com/scottjehl/Respond">Respond</a>. Heck it will even work with IE6 if you use <a href="http://selectivizr.com">Selectivizr</a>!</p>
-            </div>
+        </div>
+        <div class="grid_col--4 grid_col--oh">
+          <div class="grid_box">
+            <h3>Legacy browser support&hellip;</h3>
+            <p>JAGS will work with <em>IE6+*</em>, with a little help from <a href="https://github.com/scottjehl/Respond">Respond</a>, and will gracefully degrade to a linear solution for browers that don't support media queries.</p>
           </div>
-        </div><!-- .gs-wrp-4 -->
-      </div><!-- .gs-wrp -->
-          
-      <div class="gs-wrp">
-        <div class="gs-box">
-          <h2>Usage</h2>
-          <p>Simply add the CSS file:</p>
+        </div>
+      </div><!-- .grid -->
 
-          <pre>
-    &lt;link rel="stylesheet" media="all" href="jags.min.css" /&gt;
-          </pre>
-
-          <p>Then look at the <a href="gh-pages/layouts.html">different layouts</a> to find the grid you require. You can nest the code to create even more <a href="gh-pages/extreme-testing.html">complex grids</a>!</p>
-
-          <p>If you need Internet Explorer support for IE7-IE8 you will need a JS polyfill for CSS3 Media Queries, such as <a href="https://github.com/scottjehl/Respond">Respond</a> which should be added to the <code>&lt;head&gt;</code>:</p>
-
-          <pre>
+      <div class="grid">
+        <div class="grid_col--1">
+          <div class="grid_box">
+            <h2>Usage</h2>
+            <p>Simply add the CSS file to your HTML:</p>
+            <pre>
+    &lt;link rel="stylesheet" media="all" href="path/to/jags.min.css" /&gt;
+            </pre>
+            <p><b>Or</b> import the SCSS file into your main SCSS project:</p>
+            <pre>
+    @import "path/to/jags.scss";
+            </pre>
+            <p>Then look at the <a href="gh-pages/layouts.html">different layouts</a> to find the grid you require. You can nest the code to create even more <a href="gh-pages/extreme-testing.html">complex grids</a>!</p>
+            <p>If you need Internet Explorer support for IE7-IE8 you will need a JavaScript polyfill for the CSS media queries, such as <a href="https://github.com/scottjehl/Respond">Respond</a>, which should be added to the <code>&lt;head&gt;</code>:</p>
+            <pre>
     &lt;script src="js/respond/respond.min.js"&gt;&lt;/script&gt;
-          </pre>
+            </pre>
 
-          <h2>SCSS</h2>
-          <p>If you need to change some of the defaults like the media query breakpoints, margins or borders you can do using the <code>_vars.scss</code> and recompile using:</p>
-
-          <pre>
+            <h3>SCSS</h3>
+            <p>If you need to change some of the defaults like the media query breakpoints, margins or borders you can do using the <code>_vars.scss</code> and recompile the SCSS:</p>
+            <pre>
     $ sass jags.scss:jags.min.css --style compressed
-          </pre>
-
-          <p>or expanded:</p>
-
-          <pre>
+            </pre>
+            <p>or expanded:</p>
+            <pre>
     $ sass jags.scss:jags.css --style expanded
-          </pre>
-
+            </pre>
+          </div>
         </div>
-      </div><!-- .gs-wrp-2 -->
-  
-      <div class="gs-wrp">
-        <div class="gs-box">
-          <h2>Some notes</h2>
-          <p>There are a few things you might like to know&hellip;</p>
-        </div>
+      </div><!-- .grid -->
 
-        <div class="gs-wrp-3-bdr">
-          <div class="gs-1-fl-33">
-            <div class="gs-box">
-              <h3>Mobile-first</h3>
-              <p>The media queries have been structured in a "mobile-first" approach from 0px up, but feel free to customise they how you wish!</p>
-            </div>
+      <div class="grid">
+        <div class="grid_col--1">
+          <div class="grid_box">
+            <h2>Some notes</h2>
+            <p>There are a few things you might like to know&hellip;</p>
           </div>
-          <div class="gs-2-fl-33">
-            <div class="gs-box">
-              <h3>Equal height columns</h3>
-              <p>By default JAGS doesn't come with the equal height columns script that I'm using here, but feel free to use the one in the demo.</p>
-            </div>
+        </div>
+      </div><!-- .grid -->
+
+      <div class="grid--3">
+        <div class="grid_col--1 grid_col--fl-33">
+          <div class="grid_box">
+            <h3>Mobile-first</h3>
+            <p>The media queries have been structured with a "mobile-first" approach from 0px up, but feel free to customise them if you wish!</p>
           </div>
-          <div class="gs-3-oh">
-            <div class="gs-box">
-              <h3>What about IE6?</h3>
-              <p>IE6 was supported but has been dropped since version 0.0.4 of JAGS. That said, it can be done and requires a JavaScript <em>polyfill</em> called <a href="http://selectivizr.com/">Selectivizr</a> for CSS attribute selector support.</p>
-            </div>
+        </div>
+        <div class="grid_col--2 grid_col--fl-33">
+          <div class="grid_box">
+            <h3>Equal height columns</h3>
+            <p>By default JAGS doesn't come with the equal height columns script that I'm using here, but feel free to use the one in the demo.</p>
           </div>
-        </div><!-- .gs-wrp-3 -->
-      </div><!-- .gs-wrp -->
+        </div>
+        <div class="grid_col--3 grid_col--oh">
+          <div class="grid_box">
+            <h3>* Works in IE6?!</h3>
+            <p>Yes and no. The grids work fine with the exception of the border variations because IE6's support for adjoining classes is a little flakey.</p>
+          </div>
+        </div>
+      </div><!-- .grid -->
     </div><!-- .main -->
 
     <div class="footer" role="contentinfo">
@@ -140,14 +141,14 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script>window.jQuery.ui || document.write('<script src="gh-pages/js/jqueryui/1.10.3/jquery-ui.min.js">\x3C/script>')</script>
     <script>
-      // for the gh-pages demo only. Not required for functionality.
+      // for the demo pages only. Not required for functionality.
 
       $(document).ready(function(){
       // document.ready used for anything that we need to load as soon as the DOM is loaded
 
-        $('[class*=gs-wrp-4] .gs-box').equalCols();
-        $('[class*=gs-wrp-2] .gs-box').equalCols();
-        $('[class*=gs-wrp-3] .gs-box').equalCols();
+        $('.grid--2 .grid_box').equalCols();
+        $('.grid--3 .grid_box').equalCols();
+        $('.grid--4 .grid_box').equalCols();
 
       }); // end document.ready
 
@@ -155,9 +156,9 @@
       // window.load used for everything else that can wait to avoid stalling during page load
 
         $(window).resize(function() {
-          $('[class*=gs-wrp-4] .gs-box').equalCols();
-          $('[class*=gs-wrp-2] .gs-box').equalCols();
-          $('[class*=gs-wrp-3] .gs-box').equalCols();
+          $('.grid--2 .grid_box').equalCols();
+          $('.grid--3 .grid_box').equalCols();
+          $('.grid--4 .grid_box').equalCols();
         });
 
       }); // end window.load

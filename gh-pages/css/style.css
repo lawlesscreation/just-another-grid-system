@@ -35,7 +35,7 @@ h1 {
 
 h2 {
   font-size: 174%;
-  margin: 1.25em 0 .25em;
+  margin: .5em 0 .25em;
 }
 
 h3 {
@@ -63,7 +63,6 @@ p {margin: 1em 0; }
 code {
   background-color: #EDF6F8;
   border: 1px solid #DDD;
-  white-space: pre;
   padding: 1px 3px;
   border-radius: 3px;
 }
@@ -154,17 +153,18 @@ th {background: #ccc; }
 
 
 /* GRID */
-[class*=gs-wrp] {margin-bottom: 2em; }
+.grid,
+.grid--2,
+.grid--3,
+.grid--4,
+.grid--6 {
+  background: #FFDCDC; /* fallback */
+  background: rgba(255,0,0,.05);
+}
 
-[class*=gs-wrp] [class*=gs-wrp] {margin-bottom: 0; }
-
-[class*=gs-wrp] .gs-box {background: #FFDCDC; }
-
-[class*=gs-wrp] {background: rgba(255, 0, 0, .05); }
-
-[class*=gs-wrp] .gs-box {
-  overflow: hidden;
-  background: rgba(255, 0, 0, .075);
+.grid_box {
+  background: #FFDCDC; /* fallback */
+  background: rgba(255,0,0,.075);
 }
 
 

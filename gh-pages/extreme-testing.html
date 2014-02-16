@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Extreme testing: Just Another Grid System</title>
+    <title>Extreme testing: Just Another Grid System (JAGS)</title>
 
     <meta charset="utf-8" />
-    <meta name="description" content="A responsive, liquid grid system designed for fast and effective CSS layouts." />
+    <meta name="description" content="A CSS grid system created for developing consistent, responsive and liquid grids" />
     <meta name="author" content="Matt Lawson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -28,250 +28,264 @@
     </div><!-- .header -->
 
     <div class="main" role="main">
-      <p>This is for crazy testing</p>
+      <p>This is for crazy testing only, don't try this at home...</p>
 
-      <h2>2 / (2)(3) columns</h2>
-      <div class="gs-wrp-2-bdr">
-        <div class="gs-1-fl-50">
-          <div class="gs-box">
-            .1.
+      <div class="grid--2 grid--bdr">
+        <div class="grid_col--1 grid_col--fl-50">
+          <div class="grid_box">
+            1.1
           </div>
-          <div class="gs-wrp-2-bdr">
-            <div class="gs-1-fl-50">
-              <div class="gs-box">
-                Three columns<br/>
-                .1.
+
+          <div class="grid--2 grid--bdr">
+            <div class="grid_col--1 grid_col--fr-75">
+              <div class="grid_box">
+                2.1
               </div>
             </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">
-                .2.
+            <div class="grid_col--2 grid_col--oh">
+              <div class="grid_box">
+                2.2
               </div>
             </div>
-          </div><!-- .gs-wrp-2-bdr -->
+          </div><!-- .grid -->
+
         </div>
-        <div class="gs-2-oh">
-          <div class="gs-box">
-            .2.
+        <div class="grid_col--2 grid_col--oh">
+          <div class="grid_box">
+            1.2
           </div>
-          <div class="gs-wrp-3-bdr">
-            <div class="gs-1-fl-33">
-              <div class="gs-box">
-                Three columns <br/>
-                .1.
+
+          <div class="grid--4 grid--bdr">
+            <div class="grid_col--1 grid_col--fl-25">
+              <div class="grid_box">
+                3.1
               </div>
             </div>
-            <div class="gs-2-fl-33">
-              <div class="gs-box">
-                .2.
+            <div class="grid_col--2 grid_col--fl-25">
+              <div class="grid_box">
+                3.2
               </div>
             </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">
-                .3.
+            <div class="grid_col--3 grid_col--fl-25">
+              <div class="grid_box">
+                3.3
               </div>
             </div>
-          </div><!-- .gs-wrp-3-bdr -->
+            <div class="grid_col--4 grid_col--oh">
+              <div class="grid_box">
+                3.4
+              </div>
+            </div>
+          </div><!-- .grid -->
+
         </div>
-      </div><!-- .gs-wrp-2-bdr -->
+      </div><!-- .grid -->
 
-
-
-      <h2>2 / (3)(3) columns</h2>
-      <div class="gs-wrp-2-bdr">
-        <div class="gs-1-fl-50">
-          <div class="gs-box">
-            .1.
+      <div class="grid--3 grid--bdr">
+        <div class="grid_col--1 grid_col--fl-33">
+          <div class="grid_box">
+            4.1
           </div>
-          <div class="gs-wrp-3-bdr">
-            <div class="gs-1-fl-33">
-              <div class="gs-box">
-                Three columns<br/>
-                .1.
+
+          <div class="grid--3 grid--bdr">
+            <div class="grid_col--1 grid_col--fl-33">
+              <div class="grid_box">
+                5.1
               </div>
             </div>
-            <div class="gs-2-fl-33">
-              <div class="gs-box">
-                .2.
+            <div class="grid_col--2 grid_col--fl-33">
+              <div class="grid_box">
+                5.2
               </div>
             </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">
-                .3.
+            <div class="grid_col--3 grid_col--oh">
+              <div class="grid_box">
+                5.3
               </div>
             </div>
-          </div><!-- .gs-wrp-3-bdr -->
+          </div><!-- .grid -->
+
         </div>
-        <div class="gs-2-oh">
-          <div class="gs-box">
-            .2.
+        <div class="grid_col--2 grid_col--fl-33">
+          <div class="grid_box">
+            4.2
           </div>
-          <div class="gs-wrp-3-bdr">
-            <div class="gs-1-fl-33">
-              <div class="gs-box">
-                Three columns<br/>
-                .1.
-              </div>
-            </div>
-            <div class="gs-2-fl-33">
-              <div class="gs-box">
-                .2.
-              </div>
-            </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">
-                .3.
-              </div>
-            </div>
-          </div><!-- .gs-wrp-3-bdr -->
-        </div>
-      </div><!-- .gs-wrp-2-bdr -->
 
+          <div class="grid--2 grid--bdr">
+            <div class="grid_col--1 grid_col--fl-50">
+              <div class="grid_box">
+                6.1
+              </div>
+            </div>
+            <div class="grid_col--2 grid_col--oh">
+              <div class="grid_box">
+                6.2
+              </div>
+            </div>
+          </div><!-- .grid -->
 
-      <h2>2 / (3)(3) columns reversed</h2>
-      <div class="gs-wrp-2-bdr">
-        <div class="gs-1-fr-50">
-          <div class="gs-box">
-            .1.
-          </div>
-          <div class="gs-wrp-3-bdr">
-            <div class="gs-1-fr-33">
-              <div class="gs-box">
-                Three columns<br/>
-                .1.
-              </div>
-            </div>
-            <div class="gs-2-fl-33">
-              <div class="gs-box">
-                .2.
-              </div>
-            </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">
-                .3.
-              </div>
-            </div>
-          </div><!-- .gs-wrp-3-bdr -->
         </div>
-        <div class="gs-2-oh">
-          <div class="gs-box">
-            .2.
+        <div class="grid_col--3 grid_col--oh">
+          <div class="grid_box">
+            4.3
           </div>
-          <div class="gs-wrp-3-bdr">
-            <div class="gs-1-fr-33">
-              <div class="gs-box">
-                Three columns<br/>
-                .1.
-              </div>
-            </div>
-            <div class="gs-2-fr-33">
-              <div class="gs-box">
-                .2.
-              </div>
-            </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">
-                .3.
-              </div>
-            </div>
-          </div><!-- .gs-wrp-3-bdr -->
-        </div>
-      </div><!-- .gs-wrp-2-bdr -->
 
+          <div class="grid--3 grid--bdr">
+            <div class="grid_col--1 grid_col--fr-66">
+              <div class="grid_box">
+                7.1
+              </div>
+            </div>
+            <div class="grid_col--2 grid_col--oh">
+              <div class="grid_box">
+                7.2
+              </div>
+            </div>
+          </div><!-- .grid -->
 
-      <h2>2 / ((2/(2/(2))) (2/(3)(3))) columns - <em>crazy nesting!</em></h2>
-      <div class="gs-wrp-2-bdr">
-        <div class="gs-1-fl-50">
-          <div class="gs-box">
-            .1.
-          </div>
-          <div class="gs-wrp-2-bdr">
-            <div class="gs-1-fl-50">
-              <div class="gs-box">
-                .1.
-              </div>
-              <div class="gs-1-fl-50">
-                <div class="gs-box">
-                  .1.
-                </div>
-                <div class="gs-1-fl-50">
-                  <div class="gs-box">
-                    .1.
-                  </div>
-                </div>
-                <div class="gs-2-oh">
-                  <div class="gs-box">
-                    .2.
-                  </div>
-                </div>
-              </div><!-- .gs-1-fl-50 -->
-              <div class="gs-2-oh">
-                <div class="gs-box">
-                  .2.
-                </div>
-              </div><!-- .gs-2-oh -->
-            </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">
-                .2.
-              </div>
-            </div>
-          </div><!-- .gs-wrp-2-bdr -->
         </div>
-        <div class="gs-2-oh">
-          <div class="gs-box">
-            .2.
+      </div><!-- .grid -->
+
+      <div class="grid--2">
+        <div class="grid_col--1 grid_col--fr-66">
+          <div class="grid_box">
+            8.1
           </div>
-          <div class="gs-wrp-2-bdr">
-            <div class="gs-1-fl-50">
-              <div class="gs-box">
-                .1.
+
+          <div class="grid--3 grid--bdr">
+            <div class="grid_col--1 grid_col--fr-33">
+              <div class="grid_box">
+                9.1
               </div>
-              <div class="gs-wrp-3-bdr">
-                <div class="gs-1-fl-33">
-                  <div class="gs-box">
-                    Three columns<br/>
-                    .1.
-                  </div>
-                </div>
-                <div class="gs-2-fl-33">
-                  <div class="gs-box">
-                    .2.
-                  </div>
-                </div>
-                <div class="gs-3-oh">
-                  <div class="gs-box">
-                    .3.
-                  </div>
-                </div>
-              </div><!-- .gs-wrp-3-bdr -->
             </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">
-                .2.
+            <div class="grid_col--2 grid_col--fl-33">
+              <div class="grid_box">
+                9.2
               </div>
-              <div class="gs-wrp-3-bdr">
-                <div class="gs-1-fl-33">
-                  <div class="gs-box">
-                    Three columns<br/>
-                    .1.
-                  </div>
-                </div>
-                <div class="gs-2-fl-33">
-                  <div class="gs-box">
-                    .2.
-                  </div>
-                </div>
-                <div class="gs-3-oh">
-                  <div class="gs-box">
-                    .3.
-                  </div>
-                </div>
-              </div><!-- .gs-wrp-3-bdr -->
             </div>
-          </div><!-- .gs-wrp-2-bdr -->
-        </div><!-- .gs-2-oh -->
-      </div><!-- .gs-wrp-2-bdr -->
+            <div class="grid_col--3 grid_col--oh">
+              <div class="grid_box">
+                9.3
+              </div>
+            </div>
+          </div><!-- .grid -->
+
+        </div>
+        <div class="grid_col--2 grid_col--oh">
+          <div class="grid_box">
+            8.2
+          </div>
+
+          <div class="grid--3 grid--bdr">
+            <div class="grid_col--1 grid_col--fr-33">
+              <div class="grid_box">
+                10.1
+              </div>
+            </div>
+            <div class="grid_col--2 grid_col--fr-33">
+              <div class="grid_box">
+                10.2
+              </div>
+            </div>
+            <div class="grid_col--3 grid_col--oh">
+              <div class="grid_box">
+                10.3
+              </div>
+            </div>
+          </div><!-- .grid -->
+
+        </div>
+      </div><!-- .grid -->
+
+      <div class="grid--2 grid--bdr">
+        <div class="grid_col--1 grid_col--fl-33">
+          <div class="grid_box">
+            11.1
+          </div>
+
+          <div class="grid--2 grid--bdr">
+            <div class="grid_col--1 grid_col--fl-75">
+              <div class="grid_box">
+                12.1
+              </div>
+
+              <div class="grid--2">
+                <div class="grid_col--1 grid_col--fl-50">
+                  <div class="grid_box">
+                    13.1
+                  </div>
+                </div>
+                <div class="grid_col--2 grid_col--oh">
+                  <div class="grid_box">
+                    13.2
+                  </div>
+                </div>
+
+              </div><!-- .grid -->
+
+            </div>
+            <div class="grid_col--2 grid_col--oh">
+              <div class="grid_box">
+                12.2
+              </div>
+            </div>
+          </div><!-- .grid -->
+
+        </div>
+        <div class="grid_col--2 grid_col--oh">
+          <div class="grid_box">
+            11.2
+          </div>
+
+          <div class="grid--2 grid--bdr">
+            <div class="grid_col--1 grid_col--fl-50">
+              <div class="grid_box">
+                14.1
+              </div>
+            </div>
+            <div class="grid_col--2 grid_col--oh">
+              <div class="grid_box">
+                14.2
+              </div>
+            </div>
+          </div><!-- .grid -->
+
+          <div class="grid--6 grid--bdr">
+            <div class="grid_col--1 grid_col--fl-16">
+              <div class="grid_box">
+                15.1
+              </div>
+            </div>
+            <div class="grid_col--2 grid_col--fl-16">
+              <div class="grid_box">
+                15.2
+              </div>
+            </div>
+            <div class="grid_col--3 grid_col--fl-16">
+              <div class="grid_box">
+                15.3
+              </div>
+            </div>
+            <div class="grid_col--4 grid_col--fl-16">
+              <div class="grid_box">
+                15.4
+              </div>
+            </div>
+            <div class="grid_col--5 grid_col--fl-16">
+              <div class="grid_box">
+                15.5
+              </div>
+            </div>
+            <div class="grid_col--6 grid_col--oh">
+              <div class="grid_box">
+                15.6
+              </div>
+            </div>
+          </div><!-- .grid -->
+
+        </div>
+      </div><!-- .grid -->
+
     </div><!-- .main -->
 
     <div class="footer" role="contentinfo">
