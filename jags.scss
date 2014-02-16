@@ -1,120 +1,170 @@
 @charset "UTF-8";
 /*!
- * Just Another Grid System (JAGS)
- * A responsive, liquid grid system designed for fast and effective CSS layouts.
- * Inspired by EZ-CSS http://www.ez-css.org/ from Thierry Koblentz.
+ * Just Another gs System (JAGS)
+ * A responsive, liquid gs system designed for fast and effective CSS layouts.
  *
- * @version: 1.1.0
- * @url: https://github.com/lawlesscreation/just-another-grid-system
+ * @version: 2.0.0
+ * @url: https://github.com/lawlesscreation/just-another-gs-system
  * @author: @lawlesscreation
  * @license: licenced under MIT - http://opensource.org/licenses/mit-license.php
  */
 
-// Import setup variables
+// Import config variables
 @import "vars";
 
 
-/* JAGS
-------------------------------------------*/
-/* Box padding and margin */
-.gs-box {
-  padding: $gs_box_padding;
-  margin: $gs_box_margin;
-}
-
-/* Border colours */
-[class*=bdr] [class*=fl] {border-right-color: $gs_border_color; }
-
-[class*=bdr] [class*=fr] {border-left-color: $gs_border_color; }
-
-
-/******************** JAGS Core ********************/
-/* Wraps clears */
-[class*=gs-wrp] {
-  min-height: 0;
-  clear: both;
-}
-
-[class*=gs-wrp]:after,
-.gs-box:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-
 
 /*------------------------------------------------------------------------------------
-  Tablet (small/portrait) and up
+  Mobile and up
+  Excludes browsers that do not support media queries natively or with a polyfil
 ------------------------------------------------------------------------------------*/
-@media only screen and (min-width: $gs_break_mobile_large) {
+@media only screen {
 
-  /* JAGS
+  /* JAGS CONFIG
   ------------------------------------------*/
   /* Box padding and margin */
-  [class*=gs-wrp-2] .gs-box,
-  [class*=gs-wrp-4] .gs-box,
-  [class*=gs-wrp-6] .gs-box {
-    margin: $gs_box_margin_large;
-    padding: $gs_box_padding_large;
+  .grid_box {
+    height: 1%; // IE6 fix
+    margin: $jags_box_margin;
+    padding: $jags_box_padding;
   }
 
+  /* Border style */
+  .grid--bdr {
+
+    .grid_col--fl-16,
+    .grid_col--fl-25,
+    .grid_col--fl-33,
+    .grid_col--fl-50,
+    .grid_col--fl-66,
+    .grid_col--fl-75 {
+      border-right: {
+        color: $jags_border_color;
+        width: $jags_border_width;
+      }
+    }
+
+    .grid_col--fr-16,
+    .grid_col--fr-25,
+    .grid_col--fr-33,
+    .grid_col--fr-50,
+    .grid_col--fr-66,
+    .grid_col--fr-75 {
+      border-left: {
+        color: $jags_border_color;
+        width: $jags_border_width;
+      }
+    }
+
+  }
+
+
+  /* JAGS CORE
+  ------------------------------------------*/
+  .grid,
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--6 {
+    clear: both;
+    height: 1%; // IE6 fix
+    min-height: 0;
+
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+
+  }
+
+  .grid_box:after {
+      clear: both;
+      content: "";
+      display: block;
+      height: 0;
+      overflow: hidden;
+  }
+
+} /* end media */
+
+
+
+/*--------------------------------------------------------------------------------
+  Mobile (large/landscape) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: $jags_break_mobile_large) {
+
+  /* JAGS CONFIG
+  ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: $jags_box_margin_mobile_large;
+    padding: $jags_box_padding_mobile_large;
+  }
 
   /* Negative margin classes for border overlaps */ 
-  [class*=bdr] [class*=fl-16],
-  [class*=bdr] [class*=fl-25],
-  [class*=bdr] [class*=fl-50] {
-    margin-right: -$gs_border_width;
-    border-right-width: $gs_border_width;
-    border-right-style: $gs_border_style;
+  .grid--bdr {
+
+    .grid_col--fl-16,
+    .grid_col--fl-25,
+    .grid_col--fl-50 {
+      border-right: {
+        style: $jags_border_style;
+      }
+      margin-right: -$jags_border_width;
+    }
+
+    .grid_col--fr-16,
+    .grid_col--fr-25,
+    .grid_col--fr-50 {
+      border-left: {
+        style: $jags_border_style;
+      }
+      margin-left: -$jags_border_width;
+    }
+
   }
 
-  [class*=bdr] [class*=fr-16],
-  [class*=bdr] [class*=fr-25],
-  [class*=bdr] [class*=fr-50] {
-    margin-left: -$gs_border_width;
-    border-left-width: $gs_border_width;
-    border-left-style: $gs_border_style;
-  }
 
-
-  /******************** JAGS Core ********************/
+  /* JAGS CORE
+  ------------------------------------------*/
   /* Column float classes */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fl-50] {float: left; }
+  .grid_col--fl-16,
+  .grid_col--fl-25,
+  .grid_col--fl-50 {float: left; }
 
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-50] {float: right; }
+  .grid_col--fr-16,
+  .grid_col--fr-25,
+  .grid_col--fr-50 {float: right; }
 
   /* Remove borders for last columns */ 
-  [class*=bdr] [class*=oh],
-  [class=gs-wrp-4-bdr] [class*=gs-2],
-  [class=gs-wrp-6-bdr] [class*=gs-2],
-  [class=gs-wrp-6-bdr] [class*=gs-4] {
+  .grid--4.grid--bdr .grid_col--2,
+  .grid--6.grid--bdr .grid_col--2,
+  .grid--6.grid--bdr .grid_col--4 {
+    border-style: none;
     margin: 0; 
-    border-width: 0; 
   }
 
   /* Clear columns for responsiveness */
-  [class*=gs-wrp-4] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-5] {clear: both; }
+  .grid--4 .grid_col--3,
+  .grid--6 .grid_col--3,
+  .grid--6 .grid_col--5 {clear: both; }
 
   /* Column widths: 1/6(50), 1/4(50), 1/2(50) */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fl-50],
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-50] {width: 50%; }
+  .grid_col--fl-16,
+  .grid_col--fl-25,
+  .grid_col--fl-50,
+  .grid_col--fr-16,
+  .grid_col--fr-25,
+  .grid_col--fr-50 {width: 50%; }
 
-  [class*=gs-wrp] [class*=oh],
-  [class*=gs-wrp-4] [class*=gs-2],
-  [class*=gs-wrp-6] [class*=gs-2],
-  [class*=gs-wrp-6] [class*=gs-4] {
+  .grid_col--oh,
+  .grid--4 .grid_col--2,
+  .grid--6 .grid_col--2,
+  .grid--6 .grid_col--4 {
     float: none;
     min-height: 0;
     overflow: hidden;
@@ -125,73 +175,84 @@
 
 
 
-/*------------------------------------------------------------------------------------
-  Tablet (landscape), Desktop (small) and up
-------------------------------------------------------------------------------------*/
-@media only screen and (min-width: $gs_break_tablet) {
+/*-------------------------------------------------------------------------------
+  Tablet (small/portrait) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: $jags_break_tablet) {
 
-  /* JAGS
+  /* JAGS CONFIG
   ------------------------------------------*/
   /* Box padding and margin */
-  [class*=gs-wrp-3] .gs-box,
-  [class*=gs-wrp-6] .gs-box {
-    margin: $gs_box_margin_large;
-    padding: $gs_box_padding_large;
+  .grid_box {
+    margin: $jags_box_margin_tablet;
+    padding: $jags_box_padding_tablet;
   }
 
   /* Negative margin classes for border overlaps */ 
-  [class*=bdr] [class*=fl-16],
-  [class*=bdr] [class*=fl-33],
-  [class*=bdr] [class*=fl-66] {
-    margin-right: -$gs_border_width;
-    border-right-width: $gs_border_width;
-    border-right-style: $gs_border_style;
+  .grid--6.grid--bdr,
+  .grid--bdr {
+
+    .grid_col--fl-16,
+    .grid_col--fl-33,
+    .grid_col--fl-66 {
+      border-right: {
+        style: $jags_border_style;
+      }
+      margin-right: -$jags_border_width;
+    }
+
+    .grid_col--fr-16,
+    .grid_col--fr-33,
+    .grid_col--fr-66 {
+      border-left: {
+        style: $jags_border_style;
+      }
+      margin-left: -$jags_border_width;
+    }
+
   }
 
-  [class*=bdr] [class*=fr-16],
-  [class*=bdr] [class*=fr-33],
-  [class*=bdr] [class*=fr-66] {
-    margin-left: -$gs_border_width; 
-    border-left-width: $gs_border_width;
-    border-left-style: $gs_border_style;
-  }
 
+  /* JAGS CORE
+  ------------------------------------------*/
+  /* Column float classes */
+  .grid--6 .grid_col--fl-16,
+  .grid_col--fl-33,
+  .grid_col--fl-66 {float: left; }
 
-  /******************** JAGS Core ********************/
-  /* Floats */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-33],
-  [class*=gs-wrp] [class*=fl-66] {float: left; }
-
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-33],
-  [class*=gs-wrp] [class*=fr-66] {float: right; }
+  .grid--6 .grid_col--fr-16,
+  .grid_col--fr-33,
+  .grid_col--fr-66 {float: right; }
 
   /* Cancel clear columns for responsiveness */
-  [class*=gs-wrp-6] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-5] {clear: none; }
+  .grid--6 {
+
+    .grid_col--3,
+    .grid_col--5 {clear: none; }
+
+  }
 
   /* Clear columns for responsiveness */
-  [class*=gs-wrp-6] [class*=gs-4] {clear: both; }
+  .grid--6 .grid_col--4 {clear: both; }
 
   /* Remove borders for last columns */ 
-  [class*=gs-wrp-3-bdr] [class*=gs-3],
-  [class*=gs-wrp-6-bdr] [class*=gs-3],
-  [class*=gs-wrp-6-bdr] [class*=gs-6] {
+  .grid--3.grid--bdr .grid_col--3,
+  .grid--6.grid--bdr .grid_col--3,
+  .grid--6.grid--bdr .grid_col--6 {
+    border-style: none;
     margin: 0; 
-    border-width: 0;
   }
 
   /* Column widths: 1/6(33.33`), 1/3(33.33`), 2/3(66.6`) */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-33],
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-33] {width: 33.3333%; }
+  .grid--6 .grid_col--fl-16,
+  .grid_col--fl-33,
+  .grid--6 .grid_col--fr-16,
+  .grid_col--fr-33 {width: 33.3333%; }
 
-  [class*=gs-wrp] [class*=fl-66],
-  [class*=gs-wrp] [class*=fr-66] {width: 66.6666%; }
+  .grid_col--fl-66,
+  .grid_col--fr-66 {width: 66.6666%; }
 
-  [class*=gs-wrp-6] [class*=gs-3] {
+  .grid--6 .grid_col--3 {
     float: none;
     min-height: 0;
     overflow: hidden;
@@ -202,58 +263,81 @@
 
 
 
-/*------------------------------------------------------------------------------------
-  Desktop (wide) and up
-------------------------------------------------------------------------------------*/
-@media only screen and (min-width: $gs_break_tablet_large) {
+/*--------------------------------------------------------------------------------
+  Tablet (large/landscape), Desktop (small) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: $jags_break_tablet_large) {
 
-  /* JAGS
+  /* JAGS CONFIG
   ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: $jags_box_margin_tablet_large;
+    padding: $jags_box_padding_tablet_large;
+  }
+
   /* Negative margin classes for border overlaps */ 
-  [class*=bdr] [class*=fl-16],
-  [class*=bdr] [class*=fl-25],
-  [class*=bdr] [class*=fl-75] {
-    margin-right: -$gs_border_width;
-    border-right-width: $gs_border_width;
-    border-right-style: $gs_border_style;
+  .grid--6.grid--bdr,
+  .grid--4.grid--bdr,
+  .grid--bdr {
+
+    .grid_col--fl-16,
+    .grid_col--fl-25,
+    .grid_col--fl-75 {
+      border-right: {
+        style: $jags_border_style;
+      }
+      margin-right: -$jags_border_width;
+    }
+
+    .grid_col--fr-16,
+    .grid_col--fr-25,
+    .grid_col--fr-75 {
+      border-left: {
+        style: $jags_border_style;
+      }
+      margin-left: -1px; 
+    }
+
   }
 
-  [class*=bdr] [class*=fr-16],
-  [class*=bdr] [class*=fr-25],
-  [class*=bdr] [class*=fr-75] {
-    margin-left: -1px; 
-    border-left-width: 1px;
-    border-left-style: $gs_border_style;
-  }
 
+  /* JAGS CORE
+  ------------------------------------------*/
+  .grid--6 .grid_col--fl-16,
+  .grid--4 .grid_col--fl-25,
+  .grid_col--fl-75 {float: left; }
 
-  /******************** JAGS Core ********************/
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fl-75] {float: left; }
-
-  [class*=gs-wrp] [class*=fr-16],
-  [class*=gs-wrp] [class*=fr-25],
-  [class*=gs-wrp] [class*=fr-75] {float: right; }
+  .grid--6 .grid_col--fr-16,
+  .grid--4 .grid_col--fr-25,
+  .grid_col--fr-75 {float: right; }
 
   /* Cancel clear columns for responsiveness */
-  [class*=gs-wrp-4] [class*=gs-3],
-  [class*=gs-wrp-6] [class*=gs-4] {clear: none; }
+  .grid--4 .grid_col--3,
+  .grid--6 .grid_col--4 {clear: none; }
 
   /* Remove borders for last columns */ 
-  [class=gs-wrp-4-bdr] [class*=gs-4] {
+  .grid--bdr .grid_col--4 {
+    border-style: none;
     margin: 0; 
-    border-width: 0;
   }
 
   /* Column widths: 1/6(16.6`), 1/4(25), 3/4(75) */
-  [class*=gs-wrp] [class*=fl-16],
-  [class*=gs-wrp] [class*=fr-16] {width: 16.6666%; }
+  .grid--6 {
 
-  [class*=gs-wrp] [class*=fl-25],
-  [class*=gs-wrp] [class*=fr-25] {width: 25%; }
+    .grid_col--fl-16,
+    .grid_col--fr-16 {width: 16.6666%; }
 
-  [class*=gs-wrp] [class*=fl-75],
-  [class*=gs-wrp] [class*=fr-75] {width: 75%; }
+  }
+
+  .grid--4 {
+
+    .grid_col--fl-25,
+    .grid_col--fr-25 {width: 25%; }
+
+  }
+
+  .grid_col--fl-75,
+  .grid_col--fr-75 {width: 75%; }
 
 } /* end media */

@@ -4,7 +4,7 @@
     <title>Layouts: Just Another Grid System (JAGS)</title>
 
     <meta charset="utf-8" />
-    <meta name="description" content="A responsive, liquid grid system designed for fast and effective CSS layouts." />
+    <meta name="description" content="A CSS grid system created for developing consistent, responsive and liquid grids" />
     <meta name="author" content="Matt Lawson" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,8 +18,8 @@
 
   <body>
     <div class="header" role="banner">
-      <h1>Just Another Grid System (JAGS)</h1>
-      <p class="tagline">A responsive, liquid grid system designed for quick CSS prototyping and layouts</p>
+      <h1>Layouts</h1>
+      <p class="tagline">A CSS grid system created for developing consistent, responsive and liquid grids.</p>
       <div class="nav" role="navigation">
         <ul>
           <li><a href="../">Home</a></li>
@@ -30,13 +30,17 @@
 
     <div class="main" role="main">
       <h2>One column</h2>
-      <div class="gs-wrp">
-        <div class="gs-box">.gs-wrp .gs-box</div>
-      </div><!-- .gs-wrp -->
+        <div class="grid">
+          <div class="grid_col--1">
+            <div class="grid_box">.grid .grid_col--1 .grid_box</div>
+          </div>
+        </div><!-- .grid -->
       <pre>
-    &lt;div class="gs-wrp"&gt;
-      &lt;div class="gs-box"&gt;.gs-wrp .gs-box&lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp --&gt;
+    &lt;div class="grid"&gt;
+      &lt;div class="grid_col--1"&gt;
+        &lt;div class="grid_box"&gt;.grid .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
       </pre>
 
 
@@ -49,65 +53,65 @@
         </ul>
         <div id="two-1">
           <h3>Default</h3>
-          <div class="gs-wrp-2">
-            <div class="gs-1-fl-50">
-              <div class="gs-box">.gs-wrp-2 .gs-1-fl-50 .gs-box</div>
-            </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-2 -->
+            <div class="grid--2">
+              <div class="grid_col--1 grid_col--fl-50">
+                <div class="grid_box">.grid--2 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--2 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-2"&gt;
-      &lt;div class="gs-1-fl-50"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fl-50 .gs-box&lt;/div&gt;
+    &lt;div class="grid--2"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-50"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="two-2">
           <h3>Reversed</h3>
-          <div class="gs-wrp-2">
-            <div class="gs-1-fr-50">
-              <div class="gs-box">.gs-wrp-2 .gs-1-fr-50 .gs-box</div>
-            </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-2 -->
+            <div class="grid--2">
+              <div class="grid_col--1 grid_col--fr-50">
+                <div class="grid_box">.grid--2 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--2 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-2"&gt;
-      &lt;div class="gs-1-fr-50"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fr-50 .gs-box&lt;/div&gt;
+    &lt;div class="grid--2"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-50"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="two-3">
           <h3>With borders</h3>
-          <div class="gs-wrp-2-bdr">
-            <div class="gs-1-fl-50">
-              <div class="gs-box">.gs-wrp-2-bdr .gs-1-fl-50 .gs-box</div>
-            </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">.gs-wrp-2-bdr .gs-2-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-2-bdr -->
+            <div class="grid--2 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-50">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-2-bdr"&gt;
-      &lt;div class="gs-1-fl-50"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2-bdr .gs-1-fl-50 .gs-box&lt;/div&gt;
+    &lt;div class="grid--2 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-50"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2-bdr .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-2-bdr --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
       </div><!-- .tabs -->
@@ -122,83 +126,83 @@
         </ul>
         <div id="three-1">
           <h3>Default</h3>
-          <div class="gs-wrp-3">
-            <div class="gs-1-fl-33">
-              <div class="gs-box">.gs-wrp-3 .gs-1-fl-33 .gs-box</div>
-            </div>
-            <div class="gs-2-fl-33">
-              <div class="gs-box">.gs-wrp-3 .gs-2-fl-33 .gs-box</div>
-            </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">.gs-wrp-3 .gs-3-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-3 -->
+            <div class="grid--3">
+              <div class="grid_col--1 grid_col--fl-33">
+                <div class="grid_box">.grid--3 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-33">
+                <div class="grid_box">.grid--3 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--oh">
+                <div class="grid_box">.grid--3 .grid_col--3 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-3"&gt;
-      &lt;div class="gs-1-fl-33"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-1-fl-33 .gs-box&lt;/div&gt;
+    &lt;div class="grid--3"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fl-33"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-2-fl-33 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-3-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-3 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="three-2">
           <h3>Reversed</h3>
-          <div class="gs-wrp-3">
-            <div class="gs-1-fr-33">
-              <div class="gs-box">.gs-wrp-3 .gs-1-fr-33 .gs-box</div>
-            </div>
-            <div class="gs-2-fr-33">
-              <div class="gs-box">.gs-wrp-3 .gs-2-fr-33 .gs-box</div>
-            </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">.gs-wrp-3 .gs-3-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-3 -->
+            <div class="grid--3">
+              <div class="grid_col--1 grid_col--fr-33">
+                <div class="grid_box">.grid--3 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fr-33">
+                <div class="grid_box">.grid--3 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--oh">
+                <div class="grid_box">.grid--3 .grid_col--3 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-3"&gt;
-      &lt;div class="gs-1-fr-33"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-1-fr-33 .gs-box&lt;/div&gt;
+    &lt;div class="grid--3"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fr-33"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-2-fr-33 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fr-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3 .gs-3-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-3 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="three-3">
           <h3>With borders</h3>
-          <div class="gs-wrp-3-bdr">
-            <div class="gs-1-fl-33">
-              <div class="gs-box">.gs-wrp-3-bdr .gs-1-fl-33 .gs-box</div>
-            </div>
-            <div class="gs-2-fl-33">
-              <div class="gs-box">.gs-wrp-3-bdr .gs-2-fl-33 .gs-box</div>
-            </div>
-            <div class="gs-3-oh">
-              <div class="gs-box">.gs-wrp-3-bdr .gs-3-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-3-bdr -->
+            <div class="grid--3 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-33">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-33">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--3 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-3-bdr"&gt;
-      &lt;div class="gs-1-fl-33"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3-bdr .gs-1-fl-33 .gs-box&lt;/div&gt;
+    &lt;div class="grid--3 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-1-fl-33"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3-bdr .gs-1-fl-33 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-3-bdr .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-3-bdr --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
       </div><!-- .tabs -->
@@ -213,101 +217,101 @@
         </ul>
         <div id="four-1">
           <h3>Default</h3>
-          <div class="gs-wrp-4">
-            <div class="gs-1-fl-25">
-              <div class="gs-box">.gs-wrp-4 .gs-1-fl-25 .gs-box</div>
-            </div>
-            <div class="gs-2-fl-25">
-              <div class="gs-box">.gs-wrp-4 .gs-2-fl-25 .gs-box</div>
-            </div>
-            <div class="gs-3-fl-25">
-              <div class="gs-box">.gs-wrp-4 .gs-3-fl-25 .gs-box</div>
-            </div>
-            <div class="gs-4-oh">
-              <div class="gs-box">.gs-wrp-4 .gs-4-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-4 -->
+            <div class="grid--4">
+              <div class="grid_col--1 grid_col--fl-25">
+                <div class="grid_box">.grid--4 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-25">
+                <div class="grid_box">.grid--4 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-25">
+                <div class="grid_box">.grid--4 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--oh">
+                <div class="grid_box">.grid--4 .grid_col--4 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-4"&gt;
-      &lt;div class="gs-1-fl-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-1-fl-25 .gs-box&lt;/div&gt;
+    &lt;div class="grid--4"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fl-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-2-fl-25 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-fl-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-3-fl-25 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-4-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-4-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--4 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-4 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="four-2">
           <h3>Reversed</h3>
-          <div class="gs-wrp-4">
-            <div class="gs-1-fr-25">
-              <div class="gs-box">.gs-wrp-4 .gs-1-fr-25 .gs-box</div>
-            </div>
-            <div class="gs-2-fr-25">
-              <div class="gs-box">.gs-wrp-4 .gs-2-fr-25 .gs-box</div>
-            </div>
-            <div class="gs-3-fr-25">
-              <div class="gs-box">.gs-wrp-4 .gs-3-fr-25 .gs-box</div>
-            </div>
-            <div class="gs-4-oh">
-              <div class="gs-box">.gs-wrp-4 .gs-4-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-4 -->
+            <div class="grid--4">
+              <div class="grid_col--1 grid_col--fr-25">
+                <div class="grid_box">.grid--4 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fr-25">
+                <div class="grid_box">.grid--4 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fr-25">
+                <div class="grid_box">.grid--4 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--oh">
+                <div class="grid_box">.grid--4 .grid_col--4 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-4"&gt;
-      &lt;div class="gs-1-fr-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-1-fr-25 .gs-box&lt;/div&gt;
+    &lt;div class="grid--4"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fr-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-2-fr-25 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-fr-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-3-fr-25 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-4-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4 .gs-4-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--4 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-4 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="four-3">
           <h3>With borders</h3>
-          <div class="gs-wrp-4-bdr">
-            <div class="gs-1-fl-25">
-              <div class="gs-box">.gs-wrp-4-bdr .gs-1-fl-25 .gs-box</div>
-            </div>
-            <div class="gs-2-fl-25">
-              <div class="gs-box">.gs-wrp-4-bdr .gs-2-fl-25 .gs-box</div>
-            </div>
-            <div class="gs-3-fl-25">
-              <div class="gs-box">.gs-wrp-4-bdr .gs-3-fl-25 .gs-box</div>
-            </div>
-            <div class="gs-4-oh">
-              <div class="gs-box">.gs-wrp-4-bdr .gs-4-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-4-bdr -->
+            <div class="grid--4 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-25">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-25">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-25">
+                <div class="grid_box">.grid--bdr .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--4 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-4-bdr"&gt;
-      &lt;div class="gs-1-fl-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-1-fl-25 .gs-box&lt;/div&gt;
+    &lt;div class="grid--4 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fl-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-2-fl-25 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-fl-25"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-3-fl-25 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-4-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-4-bdr .gs-4-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--4 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-4-bdr --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
       </div><!-- .tabs -->
@@ -322,137 +326,137 @@
         </ul>
         <div id="six-1">
           <h3>Default</h3>
-          <div class="gs-wrp-6">
-            <div class="gs-1-fl-16">
-              <div class="gs-box">.gs-wrp-6 .gs-1-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-2-fl-16">
-              <div class="gs-box">.gs-wrp-6 .gs-2-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-3-fl-16">
-              <div class="gs-box">.gs-wrp-6 .gs-3-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-4-fl-16">
-              <div class="gs-box">.gs-wrp-6 .gs-4-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-5-fl-16">
-              <div class="gs-box">.gs-wrp-6 .gs-5-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-6-oh">
-              <div class="gs-box">.gs-wrp-6 .gs-6-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-6 -->
+            <div class="grid--6">
+              <div class="grid_col--1 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--4 .grid_box</div>
+              </div>
+              <div class="grid_col--5 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--5 .grid_box</div>
+              </div>
+              <div class="grid_col--6 grid_col--oh">
+                <div class="grid_box">.grid--6 .grid_col--6 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-6"&gt;
-      &lt;div class="gs-1-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-1-fl-16 .gs-box&lt;/div&gt;
+    &lt;div class="grid--6"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-2-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-3-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-4-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-4-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--4 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-5-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-5-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--5 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--5 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-6-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-6-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--6 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--6 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-6 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="six-2">
           <h3>Reversed</h3>
-          <div class="gs-wrp-6">
-            <div class="gs-1-fr-16">
-              <div class="gs-box">.gs-wrp-6 .gs-1-fr-16 .gs-box</div>
-            </div>
-            <div class="gs-2-fr-16">
-              <div class="gs-box">.gs-wrp-6 .gs-2-fr-16 .gs-box</div>
-            </div>
-            <div class="gs-3-fr-16">
-              <div class="gs-box">.gs-wrp-6 .gs-3-fr-16 .gs-box</div>
-            </div>
-            <div class="gs-4-fr-16">
-              <div class="gs-box">.gs-wrp-6 .gs-4-fr-16 .gs-box</div>
-            </div>
-            <div class="gs-5-fr-16">
-              <div class="gs-box">.gs-wrp-6 .gs-5-fr-16 .gs-box</div>
-            </div>
-            <div class="gs-6-oh">
-              <div class="gs-box">.gs-wrp-6 .gs-6-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-6 -->
+            <div class="grid--6">
+              <div class="grid_col--1 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--4 .grid_box</div>
+              </div>
+              <div class="grid_col--5 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--5 .grid_box</div>
+              </div>
+              <div class="grid_col--6 grid_col--oh">
+                <div class="grid_box">.grid--6 .grid_col--6 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-6"&gt;
-      &lt;div class="gs-1-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-1-fl-16 .gs-box&lt;/div&gt;
+    &lt;div class="grid--6"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-2-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-3-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-4-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-4-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--4 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-5-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-5-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--5 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--5 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-6-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6 .gs-6-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--6 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--6 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-6 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="six-3">
           <h3>With borders</h3>
-          <div class="gs-wrp-6-bdr">
-            <div class="gs-1-fl-16">
-              <div class="gs-box">.gs-wrp-6-bdr .gs-1-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-2-fl-16">
-              <div class="gs-box">.gs-wrp-6-bdr .gs-2-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-3-fl-16">
-              <div class="gs-box">.gs-wrp-6-bdr .gs-3-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-4-fl-16">
-              <div class="gs-box">.gs-wrp-6-bdr .gs-4-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-5-fl-16">
-              <div class="gs-box">.gs-wrp-6-bdr .gs-5-fl-16 .gs-box</div>
-            </div>
-            <div class="gs-6-oh">
-              <div class="gs-box">.gs-wrp-6-bdr .gs-6-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-6-bdr -->
+            <div class="grid--6 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--4 .grid_box</div>
+              </div>
+              <div class="grid_col--5 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--5 .grid_box</div>
+              </div>
+              <div class="grid_col--6 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--6 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-6-bdr"&gt;
-      &lt;div class="gs-1-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6-bdr .gs-1-fl-16 .gs-box&lt;/div&gt;
+    &lt;div class="grid--6 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6-bdr .gs-2-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-3-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6-bdr .gs-3-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--3 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-4-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6-bdr .gs-4-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--4 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-5-fl-16"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6-bdr .gs-5-fl-16 .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--5 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--5 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-6-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-6-bdr .gs-6-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--6 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--6 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-6-bdr --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
       </div><!-- .tabs -->
@@ -466,44 +470,44 @@
         </ul>
         <div id="other-1">
           <h3>66/33</h3>
-          <div class="gs-wrp-2">
-            <div class="gs-1-fl-66">
-              <div class="gs-box">.gs-wrp-2 .gs-1-fl-66 .gs-box</div>
-            </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-2 -->
+            <div class="grid--2">
+              <div class="grid_col--1 grid_col--fl-66">
+                <div class="grid_box">.grid--2 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--2 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-2"&gt;
-      &lt;div class="gs-1-fl-66"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fl-66 .gs-box&lt;/div&gt;
+    &lt;div class="grid--2"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-66"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
         <div id="other-2">
           <h3>75/25</h3>
-          <div class="gs-wrp-2">
-            <div class="gs-1-fl-75">
-              <div class="gs-box">.gs-wrp-2 .gs-1-fl-75 .gs-box</div>
-            </div>
-            <div class="gs-2-oh">
-              <div class="gs-box">.gs-wrp-2 .gs-2-oh .gs-box</div>
-            </div>
-          </div><!-- .gs-wrp-2 -->
+            <div class="grid--2">
+              <div class="grid_col--1 grid_col--fl-75">
+                <div class="grid_box">.grid--2 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--2 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
           <pre>
-    &lt;div class="gs-wrp-2"&gt;
-      &lt;div class="gs-1-fl-75"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-1-fl-75 .gs-box&lt;/div&gt;
+    &lt;div class="grid--2"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-75"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--1 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class="gs-2-oh"&gt;
-        &lt;div class="gs-box"&gt;.gs-wrp-2 .gs-2-oh .gs-box&lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--2 .grid_box&lt;/div&gt;
       &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- .gs-wrp-2 --&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
           </pre>
         </div>
       </div><!-- .tabs -->
@@ -520,15 +524,9 @@
     <script>window.jQuery.ui || document.write('<script src="js/jqueryui/1.10.3/jquery-ui.min.js">\x3C/script>')</script>
     <script>
       // for the gh-pages demo only. Not required for functionality.
-
-      $(document).ready(function(){
-      // document.ready used for anything that we need to load as soon as the DOM is loaded
-
-        $(function() {
-          $('.tabs').tabs();
-        });
-
-      }); // end document.ready
+      $(function() {
+        $('.tabs').tabs();
+      });
     </script>
   </body>
 </html>
