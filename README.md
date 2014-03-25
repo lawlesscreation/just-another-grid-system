@@ -60,6 +60,7 @@ Yes and no. The grids work fine with the exception of the border variations beca
 
 ## Release history
 
+ - 2014-03-25 2.0.1 Fixed some typos and URLs
  - 2014-02-16 2.0.0 Adopted loose BEM syntax for better CSS performance
  - 2014-01-25 1.1.0 Changed to semantic versioning
 
