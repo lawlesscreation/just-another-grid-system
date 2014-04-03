@@ -11,7 +11,7 @@
 Simply add the CSS file to your HTML:
 
 ```html
-<link rel="stylesheet" media="all" href="path/to/jags.min.css" />
+<link rel="stylesheet" media="all" href="path/to/jags.css" />
 ```
 
 Or import the SCSS file into your main SCSS project:
@@ -28,18 +28,21 @@ If you need Internet Explorer support for IE7-IE8 you will need a JavaScript pol
 <script src="js/respond/respond.min.js"></script>
 ```
 
+
+## Development
+
 ### SCSS
 
-If you need to change some of the defaults like the media query breakpoints, margins or borders you can do using the _vars.scss and recompile the SCSS:
-
-```bash
-$ sass jags.scss:jags.min.css --style compressed
-```
-
-or expanded:
+If you need to change some of the defaults like the media query breakpoints, margins or borders you can do using the `_vars.scss` and recompile the `jags.css` file:
 
 ```bash
 $ sass jags.scss:jags.css --style expanded
+```
+
+or compressed:
+
+```bash
+$ sass jags.scss:jags.min.css --style compressed
 ```
 
 ## Some notes
@@ -60,6 +63,7 @@ Yes and no. The grids work fine with the exception of the border variations beca
 
 ## Release history
 
+ - 2.1.1 Added lint files to project;
  - 2.1.0 Added project to bower;
  - 2.0.1 Fixed some typos and URLs;
  - 2.0.0 Adopted loose BEM syntax for better CSS performance;
