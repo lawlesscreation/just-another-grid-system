@@ -61,8 +61,10 @@ By default JAGS doesn't come with the equal height columns script that I'm using
 Yes and no. The grids work fine with the exception of the border variations because IE6's support for adjoining classes is a little flakey.
 
 
-## Release history
+## Major and minor release history
 
+ - 2.1.3 Bumped and synced version number;
+ - 2.1.2 Fixed demo;
  - 2.1.1 Added lint files to project;
  - 2.1.0 Added project to bower;
  - 2.0.1 Fixed some typos and URLs;
