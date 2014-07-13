@@ -1,6 +1,6 @@
 # Just Another Grid System (JAGS)
 
-> A CSS grid system created for developing consistent, responsive and liquid grids
+> A CSS grid system created for developing consistent, responsive and liquid grids.
 
  - [View on GitHub](https://github.com/lawlesscreation/just-another-grid-system)
  - [Download ZIP](https://github.com/lawlesscreation/just-another-grid-system/archive/master.zip)
@@ -8,7 +8,12 @@
 
 ## Usage
 
-Simply add the CSS file to your HTML:
+To get started you can either:
+
+ - Clone the repo: git clone https://github.com/lawlesscreation/just-another-grid-system.git
+ - Or install with Bower: bower install just-another-grid-system
+
+Then it's just a case of adding the CSS file to your HTML:
 
 ```html
 <link rel="stylesheet" media="all" href="path/to/jags.css" />
@@ -20,7 +25,7 @@ Or import the SCSS file into your main SCSS project:
 @import "path/to/jags.scss";
 ```
 
-Then look at the [different layouts](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/layouts.html) to find the grid you require. You can nest the code to create even more [complex grids](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/extreme-testing.html)!
+Finally, take a look at the [different layouts](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/layouts.html) to find the grid you require. You can nest the code to create even more [complex grids](http://lawlesscreation.github.io/just-another-grid-system/gh-pages/extreme-testing.html)!
 
 If you need Internet Explorer support for IE7-IE8 you will need a JavaScript polyfill for the CSS media queries, such as [Respond](https://github.com/scottjehl/Respond), which should be added to the `<head>`:
 
@@ -63,6 +68,7 @@ Yes and no. The grids work fine with the exception of the border variations beca
 
 ## Major and minor release history
 
+ - 2.1.4 Fixed demo pages and some typos;
  - 2.1.3 Bumped and synced version number;
  - 2.1.2 Fixed demo;
  - 2.1.1 Added lint files to project;
