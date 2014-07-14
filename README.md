@@ -10,8 +10,8 @@
 
 To get started you can either:
 
- - Clone the repo: git clone https://github.com/lawlesscreation/just-another-grid-system.git
- - Or install with Bower: bower install just-another-grid-system
+ - Clone the repo: `git clone https://github.com/lawlesscreation/just-another-grid-system.git`
+ - Or install with Bower: `bower install just-another-grid-system`
 
 Then it's just a case of adding the CSS file to your HTML:
 
