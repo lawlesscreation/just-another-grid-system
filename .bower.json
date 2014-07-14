@@ -1,7 +1,7 @@
 {
   "name": "just-another-grid-system",
   "description": "A CSS grid system created for developing consistent, responsive and liquid grids",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "main": "jags.css",
   "license": "MIT",
   "keywords": [
