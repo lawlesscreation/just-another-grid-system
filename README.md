@@ -68,6 +68,7 @@ Yes and no. The grids work fine with the exception of the border variations beca
 
 ## Major and minor release history
 
+ - 2.1.5 Updates SASS vars to defaults so they can be easily overwritten;
  - 2.1.4 Fixed demo pages and some typos;
  - 2.1.3 Bumped and synced version number;
  - 2.1.2 Fixed demo;
