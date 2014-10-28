@@ -47,7 +47,7 @@ $ sass jags.scss:jags.css --style expanded
 or compressed:
 
 ```bash
-$ sass jags.scss:jags.min.css --style compressed
+$ sass jags.scss:jags.min.css --style compressed --sourcemap=none
 ```
 
 ## Some notes
@@ -68,15 +68,10 @@ Yes and no. The grids work fine with the exception of the border variations beca
 
 ## Major and minor release history
 
- - 2.1.5 Updates SASS vars to defaults so they can be easily overwritten;
- - 2.1.4 Fixed demo pages and some typos;
- - 2.1.3 Bumped and synced version number;
- - 2.1.2 Fixed demo;
- - 2.1.1 Added lint files to project;
- - 2.1.0 Added project to bower;
- - 2.0.1 Fixed some typos and URLs;
- - 2.0.0 Adopted loose BEM syntax for better CSS performance;
- - 1.1.0 Changed to semantic versioning.
+- 3.0.0 Added new grid variations (33/66, 25/75);
+- 2.1.0 Added project to bower;
+- 2.0.0 Adopted loose BEM syntax for better CSS performance;
+- 1.1.0 Changed to semantic versioning.
 
 Copyright &copy; 2013 [@lawlesscreation](http://twitter.com/lawlesscreation)
 

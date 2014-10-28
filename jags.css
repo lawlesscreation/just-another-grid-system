@@ -2,7 +2,7 @@
  * Just Another Grid System (JAGS)
  * A CSS grid system created for developing consistent, responsive and liquid grids.
  *
- * @version: 2.1.5
+ * @version: 3.0.0
  * @url: https://github.com/lawlesscreation/just-another-grid-system
  * @author: @lawlesscreation
  * @license: licenced under MIT - http://opensource.org/licenses/mit-license.php
@@ -28,7 +28,7 @@
   .grid--bdr .grid_col--fl-50,
   .grid--bdr .grid_col--fl-66,
   .grid--bdr .grid_col--fl-75 {
-    border-right-color: red;
+    border-right-color: #f00;
     border-right-width: 1px;
   }
   .grid--bdr .grid_col--fr-16,
@@ -37,7 +37,7 @@
   .grid--bdr .grid_col--fr-50,
   .grid--bdr .grid_col--fr-66,
   .grid--bdr .grid_col--fr-75 {
-    border-left-color: red;
+    border-left-color: #f00;
     border-left-width: 1px;
   }
 
@@ -47,7 +47,11 @@
   .grid--2,
   .grid--3,
   .grid--4,
-  .grid--6 {
+  .grid--6,
+  .grid--66,
+  .grid--33,
+  .grid--75,
+  .grid--25 {
     clear: both;
     height: 1%;
     min-height: 0;
@@ -56,7 +60,11 @@
   .grid--2:after,
   .grid--3:after,
   .grid--4:after,
-  .grid--6:after {
+  .grid--6:after,
+  .grid--66:after,
+  .grid--33:after,
+  .grid--75:after,
+  .grid--25:after {
     clear: both;
     content: "";
     display: block;
@@ -147,6 +155,13 @@
     min-height: 0;
     overflow: hidden;
     width: auto;
+  }
+
+  /* Column widths: 1/4(100) */
+  .grid--25 .grid_col--fl-25,
+  .grid--25 .grid_col--fr-25 {
+    float: none;
+    width: 100%;
   }
 }
 /* end media */
@@ -279,13 +294,15 @@
   ------------------------------------------*/
   .grid--6 .grid_col--fl-16,
   .grid--4 .grid_col--fl-25,
-  .grid_col--fl-75 {
+  .grid_col--fl-75,
+  .grid--25 .grid_col--fl-25 {
     float: left;
   }
 
   .grid--6 .grid_col--fr-16,
   .grid--4 .grid_col--fr-25,
-  .grid_col--fr-75 {
+  .grid_col--fr-75,
+  .grid--25 .grid_col--fr-25 {
     float: right;
   }
 
@@ -301,7 +318,7 @@
     margin: 0;
   }
 
-  /* Column widths: 1/6(16.6`), 1/4(25), 3/4(75) */
+  /* Column widths: 1/6(16.6`), 1/4(25), 3/4(75), 1/4(25) */
   .grid--6 .grid_col--fl-16,
   .grid--6 .grid_col--fr-16 {
     width: 16.6666%;
@@ -312,9 +329,16 @@
     width: 25%;
   }
 
-  .grid_col--fl-75,
-  .grid_col--fr-75 {
+  .grid--75 .grid_col--fl-75,
+  .grid--75 .grid_col--fr-75 {
     width: 75%;
+  }
+
+  .grid--25 .grid_col--fl-25,
+  .grid--25 .grid_col--fr-25 {
+    width: 25%;
   }
 }
 /* end media */
+
+/*# sourceMappingURL=jags.css.map */

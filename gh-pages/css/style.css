@@ -157,7 +157,11 @@ th {background: #ccc; }
 .grid--2,
 .grid--3,
 .grid--4,
-.grid--6 {
+.grid--6,
+.grid--66,
+.grid--33,
+.grid--75,
+.grid--25 {
   background: #FFDCDC; /* fallback */
   background: rgba(255,0,0,.05);
 }
